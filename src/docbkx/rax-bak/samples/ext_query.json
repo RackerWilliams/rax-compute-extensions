@@ -1,0 +1,23 @@
+{
+    "extensions": [
+        {
+            "name": "Backup Schedule Extension",
+            "namespace": "http://docs.rackspace.com/servers/api/ext/backup/v1.0",
+            "alias": "RAX-BAK",
+            "updated": "2011-09-12T10:40:00-04:00",
+            "description": "Allows the schedule of periodic (daily and weekly) images from a server.",
+            "links": [
+                {
+                    "rel": "describedby",
+                    "type": "application/pdf",
+                    "href": "http://docs.rackspacecloud.com/servers/api/ext/rax-backup.pdf"
+                },
+                {
+                    "rel": "describedby",
+                    "type": "application/xml",
+                    "href": "http://docs.rackspacecloud.com/servers/api/ext/rax-backup/rax-backup.wadl"
+                }
+            ]
+        }
+    ]
+}

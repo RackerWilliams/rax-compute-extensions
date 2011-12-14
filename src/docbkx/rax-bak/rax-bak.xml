@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+        <!-- Some useful entities borrowed from HTML -->
+        <!ENTITY ndash  "&#x2013;">
+        <!ENTITY mdash  "&#x2014;">
+        <!ENTITY hellip "&#x2026;">
+
+        <!-- Useful for describing APIs -->
+        <!ENTITY GET    '<command xmlns="http://docbook.org/ns/docbook">GET</command>'>
+        <!ENTITY PUT    '<command xmlns="http://docbook.org/ns/docbook">PUT</command>'>
+        <!ENTITY POST   '<command xmlns="http://docbook.org/ns/docbook">POST</command>'>
+        <!ENTITY DELETE '<command xmlns="http://docbook.org/ns/docbook">DELETE</command>'>
+
+        <!ENTITY ARROW  '<inlinemediaobject xmlns="http://docbook.org/ns/docbook">
+                 <imageobject>
+                  <imagedata fileref="img/Arrow_east.svg"
+                             format="SVG" scale="60"/>
+                </imageobject>
+              </inlinemediaobject>'>
+
+        <!-- Information about the extension -->
+        <!ENTITY PUB_DATE "2011-09-24">
+        <!ENTITY ALIAS "RAX-BAK">
+        <!ENTITY NAMESPACE "http://docs.rackspace.com/servers/api/ext/backup/v1.0">
+]>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:rax="http://docs.rackspace.com/api"
+      xmlns:wadl="http://wadl.dev.java.net/2009/02"
+      version="5.0">
+    <title>OpenStack Compute Backup Schedule Extension</title>
+    <titleabbrev>&ALIAS;</titleabbrev>
+  <info>
+    <author>
+      <personname>
+        <firstname/>
+        <surname/>
+      </personname>
+      <affiliation>
+        <orgname>Rackspace Cloud</orgname>
+      </affiliation>
+    </author>
+    <copyright>
+        <year>2011</year>
+        <holder>Rackspace US, Inc.</holder>
+    </copyright>
+    <productname>OpenStack Compute</productname>
+    <pubdate>&PUB_DATE;</pubdate>
+    <legalnotice role="rs-api">
+        <annotation>
+            <remark>Copyright details are filled in by the template.</remark>
+        </annotation>
+    </legalnotice>
+    <abstract>
+      <para>
+          This document is intended for software developers interested
+          in using the Disk Management Extension to the OpenStack
+          Compute Application Programming Interface
+          (<abbrev>API</abbrev>).
+      </para>
+    </abstract>
+    <revhistory>
+        <revision>
+            <date>2011-09-24</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Switched
+                            /servers/id/OS-BAK/backup_schedule
+                            to
+                            /{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule
+                            in new resource section.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+        <revision>
+            <date>2011-09-12</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Initial release.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+    </revhistory>
+  </info>
+  <chapter>
+      <title>About This Extension</title>
+      <variablelist spacing="compact">
+          <varlistentry>
+              <term>Name</term>
+              <listitem>
+                  <para>Backup Schedule Extension</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Namespace</term>
+              <listitem>
+                  <para>&NAMESPACE;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Alias</term>
+              <listitem>
+                  <para>&ALIAS;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Contact</term>
+              <listitem>
+                  <para>
+                      <personname>
+                          <firstname>Gabe</firstname>
+                          <surname>Westmaas</surname>
+                      </personname>
+                      <email>gabe.westmaas@rackspace.com</email>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Status</term>
+              <listitem>
+                  <para>ALPHA</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Last Update</term>
+              <listitem>
+                  <para>&PUB_DATE;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Dependencies</term>
+              <listitem>
+                  <para>OpenStack Compute API v1.1 (2011-09-08)</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (PDF)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-backup.pdf">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-backup.pdf
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (WADL)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-backup/rax-backup.wadl">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-backup/rax-backup.wadl
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (XSD)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-backup/api.xsd">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-backup/api.xsd
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Short Description</term>
+              <listitem>
+                  <para>
+                      Allows the schedule of periodic (daily and
+                      weekly) images from a server.
+                  </para>
+              </listitem>
+          </varlistentry>
+      </variablelist>
+      <?hard-pagebreak?>
+      <example>
+          <title>Extension Query Response: XML</title>
+          <programlisting language="xml">
+<?db-font-size 95% ?><xi:include href="samples/ext_query.xml" parse="text"/>
+          </programlisting>
+      </example>
+      <?hard-pagebreak?>
+      <example>
+          <title>Extension Query Response: JSON</title>
+          <programlisting language="javascript">
+<?db-font-size 95% ?><xi:include href="samples/ext_query.json" parse="text"/>
+          </programlisting>
+      </example>
+      <section>
+          <title>Document Change History</title>
+          <para>
+              The most recent changes to this document are desrcibed
+              below.
+          </para>
+          <?rax revhistory?>
+      </section>
+  </chapter>
+  <chapter role="api-reference">
+      <title>Summary of Changes</title>
+      <para>
+          In addition to creating images on demand, the extension also
+          alows the schedule of periodic (daily and weekly) images via
+          a backup schedule. The daily and weekly images are triggered
+          automatically based on the backup schedule established.
+      </para>
+      <section>
+          <title>New Headers</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Faults</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Resources</title>
+          <para>
+              A new resource is created at
+              /{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule.
+              A backup schedule can be defined to create server images
+              at regular intervals (daily and weekly). Backup
+              schedules are configurable per server.
+          </para>
+          <para>
+              Operations on a backup schedule are described below. The
+              daily and weekly images are triggered automatically
+              based on the backup schedule established.  The
+              days/times specified for the backup schedule are targets
+              and actual start and completion times may vary based on
+              other activity in the system. All backup times are in
+              GMT.
+          </para>
+          <?hard-pagebreak?>
+          <table rules="all">
+              <caption>Weekly Backup Schedule</caption>
+              <thead>
+                  <tr>
+                      <td>Value</td>
+                      <td>Day</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>DISABLED</td>
+                      <td>Weekly backup disabled</td>
+                  </tr>
+                  <tr>
+                      <td>SUNDAY</td>
+                      <td>Sunday</td>
+                  </tr>
+                  <tr>
+                      <td>MONDAY</td>
+                      <td>Monday</td>
+                  </tr>
+                  <tr>
+                      <td>TUESDAY</td>
+                      <td>Tuesday</td>
+                  </tr>
+                  <tr>
+                      <td>WEDNESDAY</td>
+                      <td>Wednesday</td>
+                  </tr>
+                  <tr>
+                      <td>THURSDAY</td>
+                      <td>Thursday</td>
+                  </tr>
+                  <tr>
+                      <td>FRIDAY</td>
+                      <td>Friday</td>
+                  </tr>
+                  <tr>
+                      <td>SATURDAY</td>
+                      <td>Saturday</td>
+                  </tr>
+                </tbody>
+          </table>
+          <table rules="all">
+              <caption>Daily Backup Schedule</caption>
+              <thead>
+                  <tr>
+                      <td>Value</td>
+                      <td>Hour Range</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>DISABLED</td>
+                      <td>Daily backups disabled</td>
+                  </tr>
+                  <tr>
+                      <td>H_0000_0200</td>
+                      <td>0000-0200</td>
+                  </tr>
+                  <tr>
+                      <td>H_0200_0400</td>
+                      <td>0200-0400</td>
+                  </tr>
+                  <tr>
+                      <td>H_0400_0600</td>
+                      <td>0400-0600</td>
+                  </tr>
+                  <tr>
+                      <td>H_0600_0800</td>
+                      <td>0600-0800</td>
+                  </tr>
+                  <tr>
+                      <td>H_0800_1000</td>
+                      <td>0800-1000</td>
+                  </tr>
+                  <tr>
+                      <td>H_1000_1200</td>
+                      <td>1000-1200</td>
+                  </tr>
+                  <tr>
+                      <td>H_1200_1400</td>
+                      <td>1200-1400</td>
+                  </tr>
+                  <tr>
+                      <td>H_1400_1600</td>
+                      <td>1400-1600</td>
+                  </tr>
+                  <tr>
+                      <td>H_1600_1800</td>
+                      <td>1600-1800</td>
+                  </tr>
+                  <tr>
+                      <td>H_1800_2000</td>
+                      <td>1800-2000</td>
+                  </tr>
+                  <tr>
+                      <td>H_2000_2200</td>
+                      <td>2000-2200</td>
+                  </tr>
+                  <tr>
+                      <td>H_2200_0000</td>
+                      <td>2200-0000</td>
+                  </tr>
+              </tbody>
+          </table>
+          <resources xmlns="http://wadl.dev.java.net/2009/02">
+              <?rax-wadl skipSummary="true"?>
+              <resource href="rax-bak.wadl#BackupSchedule"/>
+          </resources>
+      </section>
+      <section>
+          <title>New Actions</title>
+          <para>None.</para>
+      </section>
+  </chapter>
+</book>

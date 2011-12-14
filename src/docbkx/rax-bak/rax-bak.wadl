@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- (C) 2011 OpenStack LLC., All Rights Reserved -->
+
+<!--*******************************************************-->
+<!--         Import Common XML Entities                    -->
+<!--                                                       -->
+<!--     You can resolve the entites with xmllint          -->
+<!--                                                       -->
+<!--        xmllint -noent rax-bak.wadl                    -->
+<!--*******************************************************-->
+<!DOCTYPE application [
+<!ENTITY % common  
+  SYSTEM "https://raw.github.com/openstack/compute-api/master/openstack-compute-api-1.1/src/common.ent">
+
+%common;
+]>
+
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+   xmlns="http://wadl.dev.java.net/2009/02"
+   xmlns:bak="http://docs.rackspace.com/servers/api/ext/backup/v1.0"
+   xmlns:osapi="http://docs.openstack.org/compute/api/v1.1"
+   xmlns:xsdxt="http://docs.rackspacecloud.com/xsd-ext/v1.0"
+   xmlns:html="http://www.w3.org/1999/xhtml"
+   xmlns:atom="http://www.w3.org/2005/Atom">
+
+    <grammars>
+        <include href="xsd/api.xsd" />
+    </grammars>
+
+    <resources base="https://servers.api.openstack.com">
+        <resource id="BackupSchedule"
+                  type="#BackupResourceType" 
+                  path="v1.1/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule">
+            <param name="tenantId" style="template" type="xsd:string"/>
+            <param name="serverId" style="template" type="osapi:UUID"/>
+        </resource>
+    </resources>
+    
+    <resource_type id="BackupResourceType">
+        <method href="#getBackupSchedule"/>
+        <method href="#setBackupSchedule"/>
+        <method href="#disableBackupSchedule"/>
+    </resource_type>
+
+    <method name="GET" id="getBackupSchedule">
+        <doc xml:lang="EN" title="List Backup Schedule">
+            <html:p class="shortdesc">
+                List the backup schedule for the specified server.
+            </html:p>
+            <html:p>
+                This operations lists the backup schedule for the
+                specified server.
+            </html:p>
+        </doc>
+        <response status="200 203">
+            <representation mediaType="application/xml" element="bak:backupSchedule">
+                <doc xml:lang="EN">
+                   <xsdxt:code href="samples/backup.xml" />
+                </doc>
+            </representation>
+            <representation mediaType="application/json">
+                <doc xml:lang="EN">
+                   <xsdxt:code href="samples/backup.json" />
+                </doc>
+            </representation>
+        </response>
+        <!-- Common and GET Faults-->
+        &commonFaults;
+        &getFaults;
+    </method>
+
+    <method name="POST" id="setBackupSchedule">
+        <doc xml:lang="EN" title="Set Backup Schedule">
+            <html:p class="shortdesc">
+                Set the backup schedule for the specified
+                server.
+            </html:p>
+            <html:p>
+                This operation creates a new backup schedule or updates
+                an existing backup schedule for the specified
+                server. Backup schedules will occur only when the
+                enabled attribute is set to true. The weekly and daily
+                attributes can be used to set or to disable individual
+                backup schedules.
+            </html:p>
+        </doc>
+        <request>
+            <representation mediaType="application/xml" element="bak:backupSchedule">
+                <doc xml:lang="EN">
+                   <xsdxt:code href="samples/backup.xml" />
+                </doc>
+            </representation>
+            <representation mediaType="application/json">
+                <doc xml:lang="EN">
+                   <xsdxt:code href="samples/backup.json" />
+                </doc>
+            </representation>
+        </request>
+        <response status="204"/>
+        <response status="409">
+            <representation mediaType="application/xml" element="osapi:backupOrResizeInProgress"/>
+            <representation mediaType="applicaiton/json"/>
+        </response>
+        <!-- All other faults, build, common, get, post/put, and inProgress -->
+        &commonFaults;
+        &getFaults;
+        &postPutFaults;
+        &inProgressFault;
+    </method>
+
+    <method name="DELETE" id="disableBackupSchedule">
+        <doc xml:lang="EN" title="Disable Backup Schedule">
+            <html:p class="shortdesc">
+                Disables the backup schedule for the specified server.
+            </html:p>
+            <html:p>
+                This operation disables the backup schedule for the specified server.
+            </html:p>
+        </doc>
+        <response status="204"/>
+        <response status="409">
+            <representation mediaType="application/xml" element="osapi:backupOrResizeInProgress"/>
+            <representation mediaType="applicaiton/json"/>
+        </response>
+        <!-- All other faults, build, common, get and inProgress -->
+        &commonFaults;
+        &getFaults;
+        &inProgressFault;
+    </method>
+</application>

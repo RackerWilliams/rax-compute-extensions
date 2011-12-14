@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<backupSchedule 
+    xmlns="http://docs.rackspace.com/servers/api/ext/backup/v1.0"
+    enabled="true" weekly="THURSDAY" daily="H_0400_0600"/>

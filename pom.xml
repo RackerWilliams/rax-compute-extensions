@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rackspace.cloud.api</groupId>
+    <artifactId>rax-compute-extensions</artifactId>
+    <name>Rackspace Compute Extensions</name>
+    <version>1.0.0-SNAPSHOT</version>
+    <properties>
+        <doctools.version>1.0.8</doctools.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.rackspace.cloud.api</groupId>
+            <artifactId>clouddocs-maven-plugin</artifactId>
+            <scope>compile</scope>
+            <version>${doctools.version}</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>Rackspace Research Repositories</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>rackspace-research</id>
+                    <name>Rackspace Research Repository</name>
+                    <url>http://maven.research.rackspacecloud.com/content/groups/public/</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>rackspace-research</id>
+                    <name>Rackspace Research Repository</name>
+                    <url>http://maven.research.rackspacecloud.com/content/groups/public/</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <build>
+        <plugins>
+            <!-- Unpack the wadl normalization xslts -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-shared-resources</id>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/generated-resources</outputDirectory>
+                            <includeGroupIds>com.rackspace.cloud.api</includeGroupIds>
+                            <includeArtifactIds>clouddocs-maven-plugin</includeArtifactIds>
+                            <excludeTransitive>true</excludeTransitive>
+                            <includes>**/normalizeWadl/*.xsl</includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <transformationSets>
+                        <transformationSet>
+                            <dir>src/docbkx/rax-bak</dir>
+                            <includes>
+                                <include>rax-bak.wadl</include>
+                            </includes>
+                            <stylesheet>${project.build.directory}/generated-resources/cloud/normalizeWadl/normalizeWadl.xsl</stylesheet>
+                            <parameters>
+                                <parameter>
+                                    <name>flattenXsds</name>
+                                    <value>false</value>
+                                </parameter>
+                            </parameters>
+                        </transformationSet>
+                    </transformationSets>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.saxon</groupId>
+                        <artifactId>saxon</artifactId>
+                        <version>8.7</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>com.rackspace.cloud.api</groupId>
+                <artifactId>clouddocs-maven-plugin</artifactId>
+                <version>${doctools.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                            <goal>generate-webhelp</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includes>rax-bak/rax-bak.xml</includes>
+                    <trimWadlUriCount>1</trimWadlUriCount>
+                    <pdfUrl>rax-bak.pdf</pdfUrl>
+                    <canonicalUrlBase>http://docs.rackspacecloud.com/openstack-extensions/compute/rax-bak/content</canonicalUrlBase>
+                    <chunkSectionDepth>0</chunkSectionDepth>
+                    <postProcess>
+                        <copy todir="target/docbkx/webhelp/rax-bak/rax-bak/content/">
+                            <fileset dir="target/docbkx/pdf/rax-bak">
+                                <include name="**/*.pdf"/>
+                            </fileset>
+                            <fileset dir="src/docbkx/rax-bak/samples/">
+                                <include name="ext_query.xml"/>
+                            </fileset>
+                        </copy>
+                    </postProcess>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
