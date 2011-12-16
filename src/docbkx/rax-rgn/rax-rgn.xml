@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+        <!-- Some useful entities borrowed from HTML -->
+        <!ENTITY ndash  "&#x2013;">
+        <!ENTITY mdash  "&#x2014;">
+        <!ENTITY hellip "&#x2026;">
+
+        <!-- Useful for describing APIs -->
+        <!ENTITY GET    '<command xmlns="http://docbook.org/ns/docbook">GET</command>'>
+        <!ENTITY PUT    '<command xmlns="http://docbook.org/ns/docbook">PUT</command>'>
+        <!ENTITY POST   '<command xmlns="http://docbook.org/ns/docbook">POST</command>'>
+        <!ENTITY DELETE '<command xmlns="http://docbook.org/ns/docbook">DELETE</command>'>
+
+        <!ENTITY ARROW  '<inlinemediaobject xmlns="http://docbook.org/ns/docbook">
+                 <imageobject>
+                  <imagedata fileref="img/Arrow_east.svg"
+                             format="SVG" scale="60"/>
+                </imageobject>
+              </inlinemediaobject>'>
+
+        <!-- Information about the extension -->
+        <!ENTITY PUB_DATE "2011-10-20">
+        <!ENTITY ALIAS "RAX-RGN">
+        <!ENTITY NAMESPACE "http://docs.rackspacecloud.com/servers/api/ext/region/v1.0">
+]>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      version="5.0">
+    <title>OpenStack Compute Region Extension</title>
+    <titleabbrev>&ALIAS;</titleabbrev>
+  <info>
+    <author>
+      <personname>
+        <firstname/>
+        <surname/>
+      </personname>
+      <affiliation>
+        <orgname>Rackspace Cloud</orgname>
+      </affiliation>
+    </author>
+    <copyright>
+        <year>2011</year>
+        <holder>Rackspace US, Inc.</holder>
+    </copyright>
+    <productname>OpenStack Compute</productname>
+    <pubdate>&PUB_DATE;</pubdate>
+    <legalnotice role="rs-api">
+        <annotation>
+            <remark>Copyright details are filled in by the template.</remark>
+        </annotation>
+    </legalnotice>
+    <abstract>
+      <para>
+          This document is intended for software developers interested
+          in using the Region Extension to the OpenStack Compute
+          Application Programming Interface (<abbrev>API</abbrev>).
+      </para>
+    </abstract>
+    <revhistory>
+        <revision>
+            <date>2011-10-20</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Initial release.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+    </revhistory>
+  </info>
+  <chapter>
+      <title>About This Extension</title>
+      <variablelist spacing="compact">
+          <varlistentry>
+              <term>Name</term>
+              <listitem>
+                  <para>Region Extension</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Namespace</term>
+              <listitem>
+                  <para>&NAMESPACE;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Alias</term>
+              <listitem>
+                  <para>&ALIAS;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Contact</term>
+              <listitem>
+                  <para>
+                      <personname>
+                          <firstname>Gabe</firstname>
+                          <surname>Westmaas</surname>
+                      </personname>
+                      <email>gabe.westmaas@rackspace.com</email>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Status</term>
+              <listitem>
+                  <para>ALPHA</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Last Update</term>
+              <listitem>
+                  <para>&PUB_DATE;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Dependencies</term>
+              <listitem>
+                  <para>OpenStack Compute API v1.1 (2011-09-08)</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (PDF)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (WADL)</term>
+              <listitem>
+                  <para>
+                      None, the extension makes no modification to the API WADL.
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (XSD)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Short Description</term>
+              <listitem>
+                  <para>
+                      Adds an attribute to the server that is used to
+                      provide a hint as to the geographical region of server.
+                  </para>
+              </listitem>
+          </varlistentry>
+      </variablelist>
+      <?hard-pagebreak?>
+      <example>
+          <title>Extension Query Response: XML</title>
+          <programlisting language="xml">
+<?db-font-size 95% ?><xi:include href="samples/ext_query.xml" parse="text"/>
+          </programlisting>
+      </example>
+      <?hard-pagebreak?>
+      <example>
+          <title>Extension Query Response: JSON</title>
+          <programlisting language="javascript">
+<?db-font-size 95% ?><xi:include href="samples/ext_query.json" parse="text"/>
+          </programlisting>
+      </example>
+      <section>
+          <title>Document Change History</title>
+          <para>
+              The most recent changes to this document are desrcibed
+              below.
+          </para>
+          <?rax revhistory?>
+      </section>
+  </chapter>
+  <chapter>
+      <title>Summary of Changes</title>
+      <para>
+          The Region Extension to the OpenStack Compute API adds
+          support for a <property>region</property> attribute on
+          servers. This attribute provides a region identifier that is
+          used to provide a hint as to the geographical region of the
+          server.
+      </para>
+      <section>
+          <title>New Headers</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Faults</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Resources</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Actions</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>
+              Changes to the OpenStack Compute API
+          </title>
+          <para>
+              Servers contain a new <property>region</property>
+              attribute that gives a hint as to the geographical
+              region of the server.  The attribute is used for
+              informational purposes only, it cannot be set.
+          </para>
+          <section>
+              <title>Changes to 4.1.3 Get Server Details</title>
+              <para>
+                  Examples 4.11 and 4.12 in the OpenStack Compute
+                  Develorer Guide should be replaced with <xref
+                  linkend="xmlserver" xrefstyle="select: label"/> and
+                  <xref linkend="jsonserver" xrefstyle="select:
+                  label"/> below.
+              </para>
+              <?hard-pagebreak?>
+              <example xml:id="xmlserver">
+                  <title>Server Detail Response: XML</title>
+                  <programlisting language="xml"><?db-font-size 95% ?><xi:include href="samples/rgn-server.xml" parse="text"/></programlisting>
+              </example>
+              <?hard-pagebreak?>
+              <example xml:id="jsonserver">
+                  <title>Server Detail Response: JSON</title>
+                  <programlisting language="javascript"><?db-font-size 90%?><xi:include href="samples/rgn-server.json" parse="text"/></programlisting>
+              </example>
+          </section>
+      </section>
+  </chapter>
+</book>

@@ -155,6 +155,31 @@
                             </postProcess>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>rax-rgn</id>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                            <goal>generate-webhelp</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <includes>rax-rgn/rax-rgn.xml</includes>
+                            <trimWadlUriCount>1</trimWadlUriCount>
+                            <pdfUrl>rax-rgn.pdf</pdfUrl>
+                            <canonicalUrlBase>http://docs.rackspacecloud.com/openstack-extensions/compute/rax-rgn/content</canonicalUrlBase>
+                            <chunkSectionDepth>0</chunkSectionDepth>
+                            <postProcess>
+                                <copy todir="target/docbkx/webhelp/rax-rgn/rax-rgn/content/">
+                                    <fileset dir="target/docbkx/pdf/rax-rgn">
+                                        <include name="**/*.pdf"/>
+                                    </fileset>
+                                    <fileset dir="src/docbkx/rax-rgn/samples/">
+                                        <include name="ext_query.xml"/>
+                                    </fileset>
+                                </copy>
+                            </postProcess>
+                        </configuration>
+                    </execution>
                 </executions>
                 <configuration>
                     <xincludeSupported>true</xincludeSupported>

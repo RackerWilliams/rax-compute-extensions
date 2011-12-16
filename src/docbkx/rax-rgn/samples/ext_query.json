@@ -1,0 +1,23 @@
+{
+    "extensions": [
+        {
+            "name": "Region Extension",
+            "namespace": "http://docs.rackspacecloud.com/servers/api/ext/region/v1.0",
+            "alias": "RAX-RGN",
+            "updated": "2011-10-20T00:00:00",
+            "description": "Adds an attribute to the server that is used to provide a hint as to the geographical region of server.",
+            "links": [
+                {
+                    "rel": "describedby",
+                    "type": "application/pdf",
+                    "href": "http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf"
+                },
+                {
+                    "rel": "describedby",
+                    "type": "application/xml",
+                    "href": "http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd"
+                }
+            ]
+        }
+    ]
+}
