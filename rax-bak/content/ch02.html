@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=7"/>
+<title>Chapter 2. Summary of Changes - OpenStack Compute Backup Schedule Extension</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><link rel="home" href="index.html" title="OpenStack Compute Backup Schedule Extension"/><link rel="up" href="index.html" title="OpenStack Compute Backup Schedule Extension"/><link rel="prev" href="ch01.html" title="Chapter 1. About This Extension"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-399";
+            var language = "en";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Results';
+            txt_enter_at_least_1_char = "You must enter at least one character.";
+            txt_browser_not_supported = "Your browser is not supported. Use of Mozilla Firefox is recommended.";
+            txt_please_wait = "Please wait. Search in progress...";
+            txt_results_for = "Results for: ";
+        </script><style type="text/css">
+            input {
+            margin-bottom: 5px;
+            margin-top: 2px;
+            }
+
+            .folder {
+            display: block;
+            height: 22px;
+            padding-left: 20px;
+            background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+            }
+            
+        </style><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/><link rel="stylesheet" type="text/css" href="../common/css/positioning.css"/><link rel="stylesheet" type="text/css" href="../common/css/custom.css"/><link href="../atom.xml" type="application/atom+xml" rel="alternate" title="Document ATOM Feed"/><link rel="canonical" href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-bak/content/ch02.html"/><!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="../common/css/ie.css"/>
+	<![endif]--><link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css"/><link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css"/><script type="text/javascript" src="../common/jquery/jquery-1.4.3.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js"><!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. --></script><script type="text/javascript" src="search/htmlFileList.js"><!----></script><script type="text/javascript" src="search/htmlFileInfoList.js"><!----></script><script type="text/javascript" src="search/nwSearchFnt.js"><!----></script><script type="text/javascript" src="search/stemmers/en_stemmer.js"><!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js"><!----></script><script type="text/javascript" src="search/index-2.js"><!----></script><script type="text/javascript" src="search/index-3.js"><!----></script><script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-23102455-4']);
+	  </script><script type="text/javascript" src="../common/ga.js"><!----></script></head><body><div id="header"><a onclick="_gaq.push(['_trackEvent', 'Header', 'logo', 'click', 1]);" target="_blank" href="http://www.rackspace.com"><img src="../common/images/rackspace-logo.png" alt="Rackspace Documentation" width="157" height="47"/></a><h1>Chapter 2. Summary of Changes</h1><div id="navheader" align="right"><!----><table class="navLinks"><tr><td><a id="showHideButton" onclick="showHideToc(); _gaq.push(['_trackEvent', 'Header', 'show/hide', 'click', 1]);" class="pointLeft" title="Hide TOC tree">Sidebar
+                            </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch01.html">Prev</a> </td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.rackspace.com/api/">Rackspace Manuals</a><a href="index.html">OpenStack Compute Backup Schedule Extension</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="rax-bak.pdf"><img src="../common/images/pdf.png"/></a>
+       
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a></div></div><div id="content"><div class="statustext"> </div><div class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d7e119"/>Chapter 2. Summary of Changes</h2></div></div></div><div class="toc"><p><strong>Contents</strong></p><dl><dt><span class="section"><a href="ch02.html#d7e152">2.1. New Headers</a></span></dt><dt><span class="section"><a href="ch02.html#d7e155">2.2. New Faults</a></span></dt><dt><span class="section"><a href="ch02.html#d7e158">2.3. New Resources</a></span></dt><dd><dl><dt><span class="section"><a href="ch02.html#GET_getBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.1. List Backup Schedule</a></span></dt><dt><span class="section"><a href="ch02.html#POST_setBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.2. Set Backup Schedule</a></span></dt><dt><span class="section"><a href="ch02.html#DELETE_disableBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.3. Disable Backup Schedule</a></span></dt></dl></dd><dt><span class="section"><a href="ch02.html#d7e437">2.4. New Actions</a></span></dt></dl></div><p>
+          In addition to creating images on demand, the extension also
+          alows the schedule of periodic (daily and weekly) images via
+          a backup schedule. The daily and weekly images are triggered
+          automatically based on the backup schedule established.
+      </p><table rules="all" id="d7e122"><col width="10%"/><col width="40%"/><col width="50%"/><thead><tr><th align="center">Verb</th><th align="center">URI</th><th align="center">Description</th></tr></thead><tbody><tr><th colspan="3" align="center">New Resources</th></tr><tr><td><span class="command"><strong>GET</strong></span></td><td><code class="code">/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule</code></td><td>
+                List the backup schedule for the specified server.
+            </td></tr><tr><td><span class="command"><strong>POST</strong></span></td><td><code class="code">/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule</code></td><td>
+                Set the backup schedule for the specified
+                server.
+            </td></tr><tr><td><span class="command"><strong>DELETE</strong></span></td><td><code class="code">/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule</code></td><td>
+                Disables the backup schedule for the specified server.
+            </td></tr></tbody></table><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d7e152"/>2.1. New Headers</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d7e155"/>2.2. New Faults</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d7e158"/>2.3. New Resources</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch02.html#GET_getBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.1. List Backup Schedule</a></span></dt><dt><span class="section"><a href="ch02.html#POST_setBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.2. Set Backup Schedule</a></span></dt><dt><span class="section"><a href="ch02.html#DELETE_disableBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.3. Disable Backup Schedule</a></span></dt></dl></div><p>
+              A new resource is created at
+              /{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule.
+              A backup schedule can be defined to create server images
+              at regular intervals (daily and weekly). Backup
+              schedules are configurable per server.
+          </p><p>
+              Operations on a backup schedule are described below. The
+              daily and weekly images are triggered automatically
+              based on the backup schedule established.  The
+              days/times specified for the backup schedule are targets
+              and actual start and completion times may vary based on
+              other activity in the system. All backup times are in
+              GMT.
+          </p><table rules="all" id="d7e162"><caption>Table 2.1. Weekly Backup Schedule</caption><thead><tr>
+                      <td>Value</td>
+                      <td>Day</td>
+                  </tr></thead><tbody><tr>
+                      <td>DISABLED</td>
+                      <td>Weekly backup disabled</td>
+                  </tr><tr>
+                      <td>SUNDAY</td>
+                      <td>Sunday</td>
+                  </tr><tr>
+                      <td>MONDAY</td>
+                      <td>Monday</td>
+                  </tr><tr>
+                      <td>TUESDAY</td>
+                      <td>Tuesday</td>
+                  </tr><tr>
+                      <td>WEDNESDAY</td>
+                      <td>Wednesday</td>
+                  </tr><tr>
+                      <td>THURSDAY</td>
+                      <td>Thursday</td>
+                  </tr><tr>
+                      <td>FRIDAY</td>
+                      <td>Friday</td>
+                  </tr><tr>
+                      <td>SATURDAY</td>
+                      <td>Saturday</td>
+                  </tr></tbody></table><table rules="all" id="d7e193"><caption>Table 2.2. Daily Backup Schedule</caption><thead><tr>
+                      <td>Value</td>
+                      <td>Hour Range</td>
+                  </tr></thead><tbody><tr>
+                      <td>DISABLED</td>
+                      <td>Daily backups disabled</td>
+                  </tr><tr>
+                      <td>H_0000_0200</td>
+                      <td>0000-0200</td>
+                  </tr><tr>
+                      <td>H_0200_0400</td>
+                      <td>0200-0400</td>
+                  </tr><tr>
+                      <td>H_0400_0600</td>
+                      <td>0400-0600</td>
+                  </tr><tr>
+                      <td>H_0600_0800</td>
+                      <td>0600-0800</td>
+                  </tr><tr>
+                      <td>H_0800_1000</td>
+                      <td>0800-1000</td>
+                  </tr><tr>
+                      <td>H_1000_1200</td>
+                      <td>1000-1200</td>
+                  </tr><tr>
+                      <td>H_1200_1400</td>
+                      <td>1200-1400</td>
+                  </tr><tr>
+                      <td>H_1400_1600</td>
+                      <td>1400-1600</td>
+                  </tr><tr>
+                      <td>H_1600_1800</td>
+                      <td>1600-1800</td>
+                  </tr><tr>
+                      <td>H_1800_2000</td>
+                      <td>1800-2000</td>
+                  </tr><tr>
+                      <td>H_2000_2200</td>
+                      <td>2000-2200</td>
+                  </tr><tr>
+                      <td>H_2200_0000</td>
+                      <td>2200-0000</td>
+                  </tr></tbody></table><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="GET_getBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_"/>2.3.1. List Backup Schedule</h3></div></div></div><table rules="all" id="d7e241"><col width="10%"/><col width="40%"/><col width="50%"/><thead><tr><th align="center">Verb</th><th align="center">URI</th><th align="center">Description</th></tr></thead><tbody><tr><td><span class="command"><strong>GET</strong></span></td><td><code class="code">/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule</code></td><td>
+                List the backup schedule for the specified server.
+            </td></tr></tbody></table><p>
+                    Normal Response Code(s):
+					<span class="returnvalue">200</span>, <span class="returnvalue">203</span></p><p>
+                    Error Response Code(s):
+                    
+					computeFault (<span class="errorcode">400</span>, <span class="returnvalue">500</span>, <span class="returnvalue">…</span>),
+            serviceUnavailable (<span class="errorcode">503</span>),
+            unauthorized (<span class="errorcode">401</span>),
+            forbidden (<span class="errorcode">403</span>),
+            badRequest (<span class="errorcode">400</span>),
+            badMethod (<span class="errorcode">405</span>),
+            overLimit (<span class="errorcode">413</span>),
+            itemNotFound (<span class="errorcode">404</span>)
+   </p>
+               
+               <p>
+                This operations lists the backup schedule for the
+                specified server.
+            </p>
+            <table rules="all" id="d7e272"><caption>Table 2.3. List Backup Schedule Request Parameters</caption><col width="20%"/><col width="10%"/><col width="20%"/><col width="40%"/><thead><tr><th align="center">Name</th><th align="center">Style</th><th align="center">Type</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center"><code class="code">tenantId</code></td><td align="center">template</td><td align="center">String</td><td><p/></td></tr><tr><td align="center"><code class="code">serverId</code></td><td align="center">template</td><td align="center">UUID</td><td><p/></td></tr></tbody></table><p>This operation does not require a request body.</p><div class="example"><a id="d7e300"/><p class="title"><strong>Example 2.1. List Backup Schedule Response: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backupSchedule 
+    xmlns="http://docs.rackspace.com/servers/api/ext/backup/v1.0"
+    enabled="true" weekly="THURSDAY" daily="H_0400_0600"/&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="d7e303"/><p class="title"><strong>Example 2.2. List Backup Schedule Response: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "RAX-BAK:backupSchedule" : {
+        "enabled" : true,
+        "weekly" : "THURSDAY",
+        "daily" : "H_0400_0600"
+    }
+}
+</pre></div></div><br class="example-break"/></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="POST_setBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_"/>2.3.2. Set Backup Schedule</h3></div></div></div><table rules="all" id="d7e308"><col width="10%"/><col width="40%"/><col width="50%"/><thead><tr><th align="center">Verb</th><th align="center">URI</th><th align="center">Description</th></tr></thead><tbody><tr><td><span class="command"><strong>POST</strong></span></td><td><code class="code">/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule</code></td><td>
+                Set the backup schedule for the specified
+                server.
+            </td></tr></tbody></table><p>
+                    Normal Response Code(s):
+					<span class="returnvalue">204</span></p><p>
+                    Error Response Code(s):
+                    
+					computeFault (<span class="errorcode">400</span>, <span class="returnvalue">500</span>, <span class="returnvalue">…</span>),
+            backupOrResizeInProgress (<span class="errorcode">409</span>),
+            serviceUnavailable (<span class="errorcode">503</span>),
+            unauthorized (<span class="errorcode">401</span>),
+            forbidden (<span class="errorcode">403</span>),
+            badRequest (<span class="errorcode">400</span>),
+            badMethod (<span class="errorcode">405</span>),
+            overLimit (<span class="errorcode">413</span>),
+            itemNotFound (<span class="errorcode">404</span>),
+            badMediaType (<span class="errorcode">415</span>),
+            buildInProgress (<span class="errorcode">409</span>)
+   </p>
+               
+               <p>
+                This operation creates a new backup schedule or updates
+                an existing backup schedule for the specified
+                server. Backup schedules will occur only when the
+                enabled attribute is set to true. The weekly and daily
+                attributes can be used to set or to disable individual
+                backup schedules.
+            </p>
+            <table rules="all" id="d7e341"><caption>Table 2.4. Set Backup Schedule Request Parameters</caption><col width="20%"/><col width="10%"/><col width="20%"/><col width="40%"/><thead><tr><th align="center">Name</th><th align="center">Style</th><th align="center">Type</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center"><code class="code">tenantId</code></td><td align="center">template</td><td align="center">String</td><td><p/></td></tr><tr><td align="center"><code class="code">serverId</code></td><td align="center">template</td><td align="center">UUID</td><td><p/></td></tr></tbody></table><div class="example"><a id="d7e368"/><p class="title"><strong>Example 2.3. Set Backup Schedule Request: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backupSchedule 
+    xmlns="http://docs.rackspace.com/servers/api/ext/backup/v1.0"
+    enabled="true" weekly="THURSDAY" daily="H_0400_0600"/&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="d7e371"/><p class="title"><strong>Example 2.4. Set Backup Schedule Request: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "RAX-BAK:backupSchedule" : {
+        "enabled" : true,
+        "weekly" : "THURSDAY",
+        "daily" : "H_0400_0600"
+    }
+}
+</pre></div></div><br class="example-break"/><p>This operation does not return a response body.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="DELETE_disableBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_"/>2.3.3. Disable Backup Schedule</h3></div></div></div><table rules="all" id="d7e377"><col width="10%"/><col width="40%"/><col width="50%"/><thead><tr><th align="center">Verb</th><th align="center">URI</th><th align="center">Description</th></tr></thead><tbody><tr><td><span class="command"><strong>DELETE</strong></span></td><td><code class="code">/{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule</code></td><td>
+                Disables the backup schedule for the specified server.
+            </td></tr></tbody></table><p>
+                    Normal Response Code(s):
+					<span class="returnvalue">204</span></p><p>
+                    Error Response Code(s):
+                    
+					computeFault (<span class="errorcode">400</span>, <span class="returnvalue">500</span>, <span class="returnvalue">…</span>),
+            backupOrResizeInProgress (<span class="errorcode">409</span>),
+            serviceUnavailable (<span class="errorcode">503</span>),
+            unauthorized (<span class="errorcode">401</span>),
+            forbidden (<span class="errorcode">403</span>),
+            badRequest (<span class="errorcode">400</span>),
+            badMethod (<span class="errorcode">405</span>),
+            overLimit (<span class="errorcode">413</span>),
+            itemNotFound (<span class="errorcode">404</span>),
+            buildInProgress (<span class="errorcode">409</span>)
+   </p>
+               
+               <p>
+                This operation disables the backup schedule for the specified server.
+            </p>
+            <table rules="all" id="d7e409"><caption>Table 2.5. Disable Backup Schedule Request Parameters</caption><col width="20%"/><col width="10%"/><col width="20%"/><col width="40%"/><thead><tr><th align="center">Name</th><th align="center">Style</th><th align="center">Type</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center"><code class="code">tenantId</code></td><td align="center">template</td><td align="center">String</td><td><p/></td></tr><tr><td align="center"><code class="code">serverId</code></td><td align="center">template</td><td align="center">UUID</td><td><p/></td></tr></tbody></table><p>This operation does not require a request body and does not return a response body.</p></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d7e437"/>2.4. New Actions</h2></div></div></div><p>None.</p></div></div><script type="text/javascript" src="../common/main.js"><!----></script><hr/><div class="legal"><a href="index.html">Legal notices</a></div></div><div><div id="leftnavigation" style="padding-top:3px; background-color:white;"><div id="tabs"><ul><li><a href="#treeDiv" tabindex="1"><span class="contentsTab">Contents</span></a></li><li><a href="#searchDiv" tabindex="1"><span class="searchTab">Search</span></a></li></ul><div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;"/><div id="ulTreeDiv" style="display:none" class="thisisthat"><ul id="tree" class="filetree"><li tabindex="2"><span class="file"><a href="ch01.html">1. About This Extension</a></span><ul><li tabindex="2"><span class="file"><a href="ch01.html#d7e94">1.1. Document Change History</a></span></li></ul></li><li tabindex="2" id="webhelp-currentid"><span class="file"><a href="ch02.html">2. Summary of Changes</a></span><ul><li tabindex="2"><span class="file"><a href="ch02.html#d7e152">2.1. New Headers</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d7e155">2.2. New Faults</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d7e158">2.3. New Resources</a></span><ul><li tabindex="2"><span class="file"><a href="ch02.html#GET_getBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.1. List Backup Schedule</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#POST_setBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.2. Set Backup Schedule</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#DELETE_disableBackupSchedule_v1.1__tenantId__servers__serverId__RAX-BAK_backup_schedule_">2.3.3. Disable Backup Schedule</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="ch02.html#d7e437">2.4. New Actions</a></span></li></ul></li></ul></div></div><div id="searchDiv"><div id="search"><form onsubmit="Verifie(ditaSearch_Form);return false" name="ditaSearch_Form" class="searchForm"><fieldset class="searchFieldSet"><legend>Search</legend><center><input id="textToSearch" name="textToSearch" type="text" class="searchText"/> &nbsp; <input onclick="Verifie(ditaSearch_Form)" type="button" class="searchButton" value="Go" id="doSearch"/></center></fieldset></form></div><div id="searchResults"><center/></div><p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p></div></div></div></div><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. -->
+                   $('a[title]').qtip({ style: { name: 'cream', tip: true } })
+                </script></body></html>

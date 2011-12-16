@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+   <title>OpenStack Compute Disk Configuration Extension  revision history</title>
+   <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/atom.xml" rel="self"/>
+   <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/content/index.html"/>
+   <id/>
+   <updated>2011-12-16T14:01:05-06:00</updated>
+   <entry>
+      <title>2011-12-08</title>
+      <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/content/index.html" type="text/html"/>
+      <id>-2011-12-08</id>
+      <updated>2011-12-08</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                            Noted what happened when the diskConfig
+                            attribute is not set on server rebuild and
+                            resize.
+                        </p>
+                  </li>
+                  <li class="listitem">
+                     <p>
+                            Fixed a few minor spelling errors.
+                        </p>
+                  </li>
+               </ul>
+            </div>
+            
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2011-09-27</title>
+      <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/content/index.html" type="text/html"/>
+      <id>-2011-09-27</id>
+      <updated>2011-09-27</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                            The diskConfig attribute can now
+                            be set on rebuild and resize
+                            actions.
+                        </p>
+                  </li>
+               </ul>
+            </div>
+            
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2011-09-24</title>
+      <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/content/index.html" type="text/html"/>
+      <id>-2011-09-24</id>
+      <updated>2011-09-24</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                            Expanded description somewhat.
+                        </p>
+                  </li>
+                  <li class="listitem">
+                     <p>
+                            Refactored to use MANUAL and
+                            AUTO instead of boolean value.
+                        </p>
+                  </li>
+               </ul>
+            </div>
+            
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2011-08-24</title>
+      <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/content/index.html" type="text/html"/>
+      <id>-2011-08-24</id>
+      <updated>2011-08-24</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                            Initial release.
+                        </p>
+                  </li>
+               </ul>
+            </div>
+            
+         </div>
+      </content>
+   </entry>
+</feed>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+   <title>OpenStack Compute Backup Schedule Extension  revision history</title>
+   <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-bak/atom.xml" rel="self"/>
+   <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-bak/content/index.html"/>
+   <id/>
+   <updated>2011-12-16T14:00:56-06:00</updated>
+   <entry>
+      <title>2011-09-24</title>
+      <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-bak/content/index.html" type="text/html"/>
+      <id>-2011-09-24</id>
+      <updated>2011-09-24</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                            Switched
+                            /servers/id/OS-BAK/backup_schedule
+                            to
+                            /{tenantId}/servers/{serverId}/RAX-BAK/backup_schedule
+                            in new resource section.
+                        </p>
+                  </li>
+               </ul>
+            </div>
+            
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2011-09-12</title>
+      <link href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-bak/content/index.html" type="text/html"/>
+      <id>-2011-09-12</id>
+      <updated>2011-09-12</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                            Initial release.
+                        </p>
+                  </li>
+               </ul>
+            </div>
+            
+         </div>
+      </content>
+   </entry>
+</feed>

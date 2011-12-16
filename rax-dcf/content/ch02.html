@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=7"/>
+<title>Chapter 2. Summary of Changes - OpenStack Compute Disk Configuration Extension</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><link rel="home" href="index.html" title="OpenStack Compute Disk Configuration Extension"/><link rel="up" href="index.html" title="OpenStack Compute Disk Configuration Extension"/><link rel="prev" href="ch01.html" title="Chapter 1. About This Extension"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-388";
+            var language = "en";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Results';
+            txt_enter_at_least_1_char = "You must enter at least one character.";
+            txt_browser_not_supported = "Your browser is not supported. Use of Mozilla Firefox is recommended.";
+            txt_please_wait = "Please wait. Search in progress...";
+            txt_results_for = "Results for: ";
+        </script><style type="text/css">
+            input {
+            margin-bottom: 5px;
+            margin-top: 2px;
+            }
+
+            .folder {
+            display: block;
+            height: 22px;
+            padding-left: 20px;
+            background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+            }
+            
+        </style><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/><link rel="stylesheet" type="text/css" href="../common/css/positioning.css"/><link rel="stylesheet" type="text/css" href="../common/css/custom.css"/><link href="../atom.xml" type="application/atom+xml" rel="alternate" title="Document ATOM Feed"/><link rel="canonical" href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-dcf/content/ch02.html"/><!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="../common/css/ie.css"/>
+	<![endif]--><link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css"/><link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css"/><script type="text/javascript" src="../common/jquery/jquery-1.4.3.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js"><!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. --></script><script type="text/javascript" src="search/htmlFileList.js"><!----></script><script type="text/javascript" src="search/htmlFileInfoList.js"><!----></script><script type="text/javascript" src="search/nwSearchFnt.js"><!----></script><script type="text/javascript" src="search/stemmers/en_stemmer.js"><!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js"><!----></script><script type="text/javascript" src="search/index-2.js"><!----></script><script type="text/javascript" src="search/index-3.js"><!----></script><script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-23102455-4']);
+	  </script><script type="text/javascript" src="../common/ga.js"><!----></script></head><body><div id="header"><a onclick="_gaq.push(['_trackEvent', 'Header', 'logo', 'click', 1]);" target="_blank" href="http://www.rackspace.com"><img src="../common/images/rackspace-logo.png" alt="Rackspace Documentation" width="157" height="47"/></a><h1>Chapter 2. Summary of Changes</h1><div id="navheader" align="right"><!----><table class="navLinks"><tr><td><a id="showHideButton" onclick="showHideToc(); _gaq.push(['_trackEvent', 'Header', 'show/hide', 'click', 1]);" class="pointLeft" title="Hide TOC tree">Sidebar
+                            </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch01.html">Prev</a> </td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.rackspace.com/api/">Rackspace Manuals</a><a href="index.html">OpenStack Compute Disk Configuration Extension</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="rax-dcf.pdf"><img src="../common/images/pdf.png"/></a>
+       
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a></div></div><div id="content"><div class="statustext"> </div><div class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e152"/>Chapter 2. Summary of Changes</h2></div></div></div><div class="toc"><p><strong>Contents</strong></p><dl><dt><span class="section"><a href="ch02.html#d6e156">2.1. New Headers</a></span></dt><dt><span class="section"><a href="ch02.html#d6e159">2.2. New Faults</a></span></dt><dt><span class="section"><a href="ch02.html#d6e162">2.3. New Resources</a></span></dt><dt><span class="section"><a href="ch02.html#d6e165">2.4. New Actions</a></span></dt><dt><span class="section"><a href="ch02.html#d6e168">2.5. 
+              Changes to the OpenStack Compute API
+          </a></span></dt><dd><dl><dt><span class="section"><a href="ch02.html#d6e172">2.5.1. Changes to 4.1.3 and 4.5.2 Get Server/Image Details</a></span></dt><dt><span class="section"><a href="ch02.html#d6e194">2.5.2. Changes to 4.1.2 Create Server</a></span></dt><dt><span class="section"><a href="ch02.html#d6e216">2.5.3. Changes to 4.3.3 Rebuild Server</a></span></dt><dt><span class="section"><a href="ch02.html#d6e232">2.5.4. Changes to 4.3.4 Resize Server</a></span></dt></dl></dd></dl></div><p>
+          The Disk Configuration Extension to the OpenStack Compute
+          API adds support for a <span class="property">diskConfig</span>
+          attribute on servers and images. These attribute controls
+          how a disk is partitioned when a server is created, rebuilt,
+          or resized.
+      </p><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e156"/>2.1. New Headers</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e159"/>2.2. New Faults</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e162"/>2.3. New Resources</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e165"/>2.4. New Actions</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e168"/>2.5. 
+              Changes to the OpenStack Compute API
+          </h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch02.html#d6e172">2.5.1. Changes to 4.1.3 and 4.5.2 Get Server/Image Details</a></span></dt><dt><span class="section"><a href="ch02.html#d6e194">2.5.2. Changes to 4.1.2 Create Server</a></span></dt><dt><span class="section"><a href="ch02.html#d6e216">2.5.3. Changes to 4.3.3 Rebuild Server</a></span></dt><dt><span class="section"><a href="ch02.html#d6e232">2.5.4. Changes to 4.3.4 Resize Server</a></span></dt></dl></div><p>
+              Images and servers contain a new
+              <span class="property">diskConfig</span> attribute that controls
+              how a disk is partitioned when a server is created,
+              rebuilt, or resized.
+          </p><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e172"/>2.5.1. Changes to 4.1.3 and 4.5.2 Get Server/Image Details</h3></div></div></div><p>
+                  Examples 4.11 and 4.12 in the OpenStack Compute
+                  Developer Guide should be replaced with <a class="xref" href="ch02.html#xmlserver" title="Example 2.1. Server Detail Response: XML">Example 2.1</a> and
+                  <a class="xref" href="ch02.html#jsonserver" title="Example 2.2. Server Detail Response: JSON">Example 2.2</a> below.  Similarly the attribute can be
+                  specified on an image such that Examples 4.47 and
+                  4.48 are changed as illustrated in <a class="xref" href="ch02.html#xmlimage" title="Example 2.3. Image Detail Response: XML">Example 2.3</a> and
+                  <a class="xref" href="ch02.html#jsonimage" title="Example 2.4. Image Detail Response: JSON">Example 2.4</a>.  The <span class="property">diskConfig</span>
+                  attribute can contain one of two possible values:
+                  <code class="code">AUTO</code> and <code class="code">MANUAL</code>.
+              </p><div class="example"><a id="xmlserver"/><p class="title"><strong>Example 2.1. Server Detail Response: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server xmlns="http://docs.openstack.org/compute/api/v1.1"
+        xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:dcf="http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0"
+        id="52415800-8b69-11e0-9b19-734f000004d2"
+        tenantId="1234" userId="5678"
+        name="sample-server" status="BUILD"
+        updated="2010-10-10T12:00:00Z" created="2010-08-10T12:00:00Z"
+        progress="60" hostId="e4d909c290d0fb1ca068ffaddf22cbd0"
+        accessIPv4="67.23.10.132"
+        accessIPv6="::babe:67.23.10.132"
+        dcf:diskConfig="MANUAL"&gt;
+    &lt;image id="52415800-8b69-11e0-9b19-734f6f006e54"&gt;
+        &lt;atom:link
+            rel="self"
+            href="http://servers.api.openstack.org/v1.1/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"/&gt;
+        &lt;atom:link
+            rel="bookmark"
+            href="http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"/&gt;
+    &lt;/image&gt;
+    &lt;flavor id="52415800-8b69-11e0-9b19-734f216543fd"&gt;
+        &lt;atom:link
+            rel="self"
+            href="http://servers.api.openstack.org/v1.1/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"/&gt;
+        &lt;atom:link
+            rel="bookmark"
+            href="http://servers.api.openstack.org/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"/&gt;
+    &lt;/flavor&gt;
+    &lt;metadata&gt;
+        &lt;meta key="Server Label"&gt;Web Head 1&lt;/meta&gt;
+        &lt;meta key="Image Version"&gt;2.1&lt;/meta&gt;
+    &lt;/metadata&gt;
+    &lt;addresses&gt;
+        &lt;network id="public"&gt;
+            &lt;ip version="4" addr="67.23.10.132"/&gt;
+            &lt;ip version="6" addr="::babe:67.23.10.132"/&gt;
+            &lt;ip version="4" addr="67.23.10.131"/&gt;
+            &lt;ip version="6" addr="::babe:4317:0A83"/&gt;
+        &lt;/network&gt;
+        &lt;network id="private"&gt;
+            &lt;ip version="4" addr="10.176.42.16"/&gt;
+            &lt;ip version="6" addr="::babe:10.176.42.16"/&gt;
+        &lt;/network&gt;
+    &lt;/addresses&gt;
+    &lt;atom:link
+        rel="self"
+        href="http://servers.api.openstack.org/v1.1/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"/&gt;
+    &lt;atom:link
+        rel="bookmark"
+        href="http://servers.api.openstack.org/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"/&gt;
+&lt;/server&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="jsonserver"/><p class="title"><strong>Example 2.2. Server Detail Response: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "server": {
+        "id": "52415800-8b69-11e0-9b19-734f000004d2",
+        "tenantId": "1234",
+        "userId": "5678",
+        "name": "sample-server",
+        "updated": "2010-10-10T12:00:00Z",
+        "created": "2010-08-10T12:00:00Z",
+        "hostId": "e4d909c290d0fb1ca068ffaddf22cbd0",
+        "accessIPv4" : "67.23.10.132",
+        "accessIPv6" : "::babe:67.23.10.132",
+        "status": "BUILD",
+        "progress": 60,
+        "RAX-DCF:diskConfig" : "MANUAL",
+        "image" : {
+            "id": "52415800-8b69-11e0-9b19-734f6f006e54",
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "http://servers.api.openstack.org/v1.1/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"
+                },
+                {
+                    "rel": "bookmark",
+                    "href": "http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"
+                }
+            ]
+        },
+        "flavor" : {
+            "id": "52415800-8b69-11e0-9b19-734f216543fd",
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "http://servers.api.openstack.org/v1.1/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"
+                },
+                {
+                    "rel": "bookmark",
+                    "href": "http://servers.api.openstack.org/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"
+                }
+            ]
+        },
+        "addresses":  {
+            "public" : [
+                {
+                    "version": 4,
+                    "addr": "67.23.10.132"
+                },
+                {
+                    "version": 6,
+                    "addr": "::babe:67.23.10.132"
+                },
+                {
+                    "version": 4,
+                    "addr": "67.23.10.131"
+                },
+                {
+                    "version": 6,
+                    "addr": "::babe:4317:0A83"
+                }
+            ],
+            "private" : [
+                {
+                    "version": 4,
+                    "addr": "10.176.42.16"
+                },
+                {
+                    "version": 6,
+                    "addr": "::babe:10.176.42.16"
+                }
+            ]
+        },
+        "metadata": {
+            "Server Label": "Web Head 1",
+            "Image Version": "2.1"
+        },
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://servers.api.openstack.org/v1.1/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"
+            },
+            {
+                "rel": "bookmark",
+                "href": "http://servers.api.openstack.org/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"
+            }
+        ]
+    }
+}
+</pre></div></div><br class="example-break"/><div class="example"><a id="xmlimage"/><p class="title"><strong>Example 2.3. Image Detail Response: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;image
+    xmlns="http://docs.openstack.org/compute/api/v1.1"
+    xmlns:dcf="http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    id="52415800-8b69-11e0-9b19-734f5736d2a2"
+    name="My Server Backup"
+    updated="2010-10-10T12:00:00Z"
+    created="2010-08-10T12:00:00Z"
+    tenantId="12345"
+    userId="joe"
+    status="SAVING" progress="80"
+    minDisk="5" minRam="256"
+    dcf:diskConfig="AUTO"&gt;
+    &lt;server id="52415800-8b69-11e0-9b19-734f335aa7b3"&gt;
+        &lt;atom:link
+            rel="self"
+            href="http://servers.api.openstack.org/v1.1/1234/servers/52415800-8b69-11e0-9b19-734f335aa7b3"/&gt;
+        &lt;atom:link
+            rel="bookmark"
+            href="http://servers.api.openstack.org/1234/servers/52415800-8b69-11e0-9b19-734f335aa7b3"/&gt;
+    &lt;/server&gt;
+    &lt;atom:link 
+        rel="self"
+        href="http://servers.api.openstack.org/v1.1/1234/images/52415800-8b69-11e0-9b19-734f5736d2a2"/&gt;
+    &lt;atom:link 
+        rel="bookmark"
+        href="http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f5736d2a2"/&gt;
+&lt;/image&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="jsonimage"/><p class="title"><strong>Example 2.4. Image Detail Response: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "image" : {
+        "id" : "52415800-8b69-11e0-9b19-734f5736d2a2",
+        "name" : "My Server Backup",
+        "updated" : "2010-10-10T12:00:00Z",
+        "created" : "2010-08-10T12:00:00Z",
+        "tenantId" : "12345",
+        "userId" : "joe", 
+        "status" : "SAVING",
+        "progress" : 80,
+        "RAX-DCF:diskConfig" : "AUTO",
+        "minDisk" : 5,
+        "minRam" : 256,
+        "server" : {
+            "id": "52415800-8b69-11e0-9b19-734f335aa7b3",
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "http://servers.api.openstack.org/v1.1/1234/servers/52415800-8b69-11e0-9b19-734f335aa7b3"
+                },
+                {
+                    "rel": "bookmark",
+                    "href": "http://servers.api.openstack.org/1234/servers/52415800-8b69-11e0-9b19-734f335aa7b3"
+                }
+            ]
+        },
+        "links": [
+            {
+                "rel" : "self",
+                "href" : "http://servers.api.openstack.org/v1.1/1234/images/52415800-8b69-11e0-9b19-734f5736d2a2"
+            },
+            {
+                "rel" : "bookmark",
+                "href" : "http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f5736d2a2"
+            }
+        ]
+    }
+}
+</pre></div></div><br class="example-break"/></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e194"/>2.5.2. Changes to 4.1.2 Create Server</h3></div></div></div><p>
+                   When a server is created from an image with the
+                   <span class="property">diskConfig</span> value set to
+                   <code class="code">AUTO</code> the server will be built with a
+                   single partition which is expanded to the size of
+                   the flavor selected.  When the attribute is set to
+                   <code class="code">MANUAL</code> the server will be created with
+                   a 10 gigabyte partition and the remaining disk
+                   space allocated to the flavor will remain
+                   unpartitioned. A server inherits the
+                   <span class="property">diskConfig</span> attribute from the
+                   image from which it is created.  The value,
+                   however, may be overwritten when creating a server
+                   as illustrated in <a class="xref" href="ch02.html#xmlservercreate" title="Example 2.5. Server Create Request With DiskConfig: XML">Example 2.5</a> and <a class="xref" href="ch02.html#jsonservercreate" title="Example 2.6. Server Create Request With DiskConfig: JSON">Example 2.6</a>.
+              </p><div class="example"><a id="xmlservercreate"/><p class="title"><strong>Example 2.5. Server Create Request With DiskConfig: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server xmlns="http://docs.openstack.org/compute/api/v1.1"
+        xmlns:dcf="http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0"
+        imageRef="http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"
+        flavorRef="52415800-8b69-11e0-9b19-734f1195ff37"
+        name="new-server"
+        dcf:diskConfig="MANUAL"/&gt;
+
+</pre></div></div><br class="example-break"/><div class="example"><a id="jsonservercreate"/><p class="title"><strong>Example 2.6. Server Create Request With DiskConfig: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "server" : {
+        "name" : "new-server",
+        "imageRef" : "http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f6f006e54",
+        "flavorRef" : "52415800-8b69-11e0-9b19-734f1195ff37",
+        "RAX-DCF:diskConfig" : "MANUAL"
+    }
+}
+</pre></div></div><br class="example-break"/><p>
+                  In this example, the server is created with a
+                  <code class="code">MANUAL</code> diskConfig regardless of what
+                  the image <span class="property">diskConfig</span> attribute
+                  is set to.  Note, that images also inherit the
+                  <span class="property">diskConfig</span> from a server.  So,
+                  if an image is created from the server <a class="xref" href="ch02.html#xmlserver" title="Example 2.1. Server Detail Response: XML">Example 2.1, “Server Detail Response: XML”</a> it will also have a
+                  <span class="property">diskConfig</span> value of
+                  <code class="code">MANUAL</code>.
+              </p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e216"/>2.5.3. Changes to 4.3.3 Rebuild Server</h3></div></div></div><p>
+                  The <span class="property">diskConfig</span> attribute may be
+                  set when rebuilding the server. A sample rebuild
+                  request is illustrated in <a class="xref" href="ch02.html#xmlserverrebuild" title="Example 2.7. Action Rebuild With DiskConfig: XML">Example 2.7</a> and <a class="xref" href="ch02.html#jsonserverrebuild" title="Example 2.8. Action Rebuild With DiskConfig: JSON">Example 2.8</a>.  In these examples, the
+                  <span class="property">diskConfig</span> attribute is set to
+                  <code class="code">MANUAL</code>, this allows unused diskspace to
+                  be used for other partitions once the server is
+                  rebuilt.
+              </p><p>
+                  Note that if the <span class="property">diskConfig</span>
+                  attribute is not set during the rebuild, the
+                  original value of the attribute will be retained.
+              </p><div class="example"><a id="xmlserverrebuild"/><p class="title"><strong>Example 2.7. Action Rebuild With DiskConfig: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rebuild 
+    xmlns="http://docs.openstack.org/compute/api/v1.1"
+    xmlns:dcf="http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0"
+    name="newName"
+    imageRef="https://servers.api.rackspacecloud.com/v1.1/32278/images/52415800-8b69-11e0-9b19-734f6f006e54"
+    adminPass="GFf1j9aP" dcf:diskConfig="MANUAL"&gt;
+  &lt;metadata&gt;
+    &lt;meta key="My Server Name"&gt;Apache1&lt;/meta&gt;
+  &lt;/metadata&gt;
+  &lt;personality&gt;
+    &lt;file path="/etc/banner.txt"&gt;
+        ICAgICAgDQoiQSBjbG91ZCBkb2VzIG5vdCBrbm93IHdoeSBp
+        dCBtb3ZlcyBpbiBqdXN0IHN1Y2ggYSBkaXJlY3Rpb24gYW5k
+        IGF0IHN1Y2ggYSBzcGVlZC4uLkl0IGZlZWxzIGFuIGltcHVs
+        c2lvbi4uLnRoaXMgaXMgdGhlIHBsYWNlIHRvIGdvIG5vdy4g
+        QnV0IHRoZSBza3kga25vd3MgdGhlIHJlYXNvbnMgYW5kIHRo
+        ZSBwYXR0ZXJucyBiZWhpbmQgYWxsIGNsb3VkcywgYW5kIHlv
+        dSB3aWxsIGtub3csIHRvbywgd2hlbiB5b3UgbGlmdCB5b3Vy
+        c2VsZiBoaWdoIGVub3VnaCB0byBzZWUgYmV5b25kIGhvcml6
+        b25zLiINCg0KLVJpY2hhcmQgQmFjaA==
+    &lt;/file&gt;
+  &lt;/personality&gt;
+&lt;/rebuild&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="jsonserverrebuild"/><p class="title"><strong>Example 2.8. Action Rebuild With DiskConfig: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "rebuild" : {
+        "imageRef" : "https://servers.api.rackspacecloud.com/v1.1/32278/images/52415800-8b69-11e0-9b19-734f6f006e54",
+        "name" : "newName",
+        "adminPass" : "GFf1j9aP",
+        "RAX-DCF:diskConfig" : "MANUAL",
+        "metadata" : {
+            "My Server Name" : "Apache1" 
+        },
+        "personality" : [
+            {
+                "path" : "/etc/banner.txt",
+                "contents" : "ICAgICAgDQoiQSBjbG91ZCBkb2VzIG5vdCBrbm93IHdoeSBp dCBtb3ZlcyBpbiBqdXN0IHN1Y2ggYSBkaXJlY3Rpb24gYW5k IGF0IHN1Y2ggYSBzcGVlZC4uLkl0IGZlZWxzIGFuIGltcHVs c2lvbi4uLnRoaXMgaXMgdGhlIHBsYWNlIHRvIGdvIG5vdy4g QnV0IHRoZSBza3kga25vd3MgdGhlIHJlYXNvbnMgYW5kIHRo ZSBwYXR0ZXJucyBiZWhpbmQgYWxsIGNsb3VkcywgYW5kIHlv dSB3aWxsIGtub3csIHRvbywgd2hlbiB5b3UgbGlmdCB5b3Vy c2VsZiBoaWdoIGVub3VnaCB0byBzZWUgYmV5b25kIGhvcml6 b25zLiINCg0KLVJpY2hhcmQgQmFjaA==" }]}}
+</pre></div></div><br class="example-break"/></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e232"/>2.5.4. Changes to 4.3.4 Resize Server</h3></div></div></div><p>
+                  The <span class="property">diskConfig</span> attribute may be
+                  set when resizing a server.  This gives the ability
+                  to change the value of the attribute when scaling a
+                  server up or down.
+              </p><p>
+                  Note that if the <span class="property">diskConfig</span>
+                  attribute is not set during the resize, the original
+                  value of the attribute will be retained.
+              </p><div class="example"><a id="xmlserverrsize"/><p class="title"><strong>Example 2.9. Action Resize With DiskConfig: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;resize
+    xmlns="http://docs.openstack.org/compute/api/v1.1"
+    xmlns:dcf="http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0"
+    flavorRef="http://servers.api.openstack.org/1234/flavors/52415800-8b69-11e0-9b19-734f1195ff37"
+    dcf:diskConfig="AUTO"/&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="jsonserverresize"/><p class="title"><strong>Example 2.10. Action Resize With DiskConfig: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "resize" : {
+        "flavorRef" : "http://servers.api.openstack.org/1234/flavors/52415800-8b69-11e0-9b19-734f1195ff37",
+        "RAX-DCF:diskConfig" : "AUTO"
+    }
+}
+</pre></div></div><br class="example-break"/></div></div></div><script type="text/javascript" src="../common/main.js"><!----></script><hr/><div class="legal"><a href="index.html">Legal notices</a></div></div><div><div id="leftnavigation" style="padding-top:3px; background-color:white;"><div id="tabs"><ul><li><a href="#treeDiv" tabindex="1"><span class="contentsTab">Contents</span></a></li><li><a href="#searchDiv" tabindex="1"><span class="searchTab">Search</span></a></li></ul><div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;"/><div id="ulTreeDiv" style="display:none" class="thisisthat"><ul id="tree" class="filetree"><li tabindex="2"><span class="file"><a href="ch01.html">1. About This Extension</a></span><ul><li tabindex="2"><span class="file"><a href="ch01.html#d6e109">1.1. Document Change History</a></span></li></ul></li><li tabindex="2" id="webhelp-currentid"><span class="file"><a href="ch02.html">2. Summary of Changes</a></span><ul><li tabindex="2"><span class="file"><a href="ch02.html#d6e156">2.1. New Headers</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e159">2.2. New Faults</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e162">2.3. New Resources</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e165">2.4. New Actions</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e168">2.5. 
+              Changes to the OpenStack Compute API
+          </a></span><ul><li tabindex="2"><span class="file"><a href="ch02.html#d6e172">2.5.1. Changes to 4.1.3 and 4.5.2 Get Server/Image Details</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e194">2.5.2. Changes to 4.1.2 Create Server</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e216">2.5.3. Changes to 4.3.3 Rebuild Server</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e232">2.5.4. Changes to 4.3.4 Resize Server</a></span></li></ul></li></ul></li></ul></div></div><div id="searchDiv"><div id="search"><form onsubmit="Verifie(ditaSearch_Form);return false" name="ditaSearch_Form" class="searchForm"><fieldset class="searchFieldSet"><legend>Search</legend><center><input id="textToSearch" name="textToSearch" type="text" class="searchText"/> &nbsp; <input onclick="Verifie(ditaSearch_Form)" type="button" class="searchButton" value="Go" id="doSearch"/></center></fieldset></form></div><div id="searchResults"><center/></div><p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p></div></div></div></div><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. -->
+                   $('a[title]').qtip({ style: { name: 'cream', tip: true } })
+                </script></body></html>

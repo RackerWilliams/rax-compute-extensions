@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=7"/>
+<title>Chapter 2. Summary of Changes - OpenStack Compute Region Extension</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><link rel="home" href="index.html" title="OpenStack Compute Region Extension"/><link rel="up" href="index.html" title="OpenStack Compute Region Extension"/><link rel="prev" href="ch01.html" title="Chapter 1. About This Extension"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-217";
+            var language = "en";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Results';
+            txt_enter_at_least_1_char = "You must enter at least one character.";
+            txt_browser_not_supported = "Your browser is not supported. Use of Mozilla Firefox is recommended.";
+            txt_please_wait = "Please wait. Search in progress...";
+            txt_results_for = "Results for: ";
+        </script><style type="text/css">
+            input {
+            margin-bottom: 5px;
+            margin-top: 2px;
+            }
+
+            .folder {
+            display: block;
+            height: 22px;
+            padding-left: 20px;
+            background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+            }
+            
+        </style><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/><link rel="stylesheet" type="text/css" href="../common/css/positioning.css"/><link rel="stylesheet" type="text/css" href="../common/css/custom.css"/><link href="../atom.xml" type="application/atom+xml" rel="alternate" title="Document ATOM Feed"/><link rel="canonical" href="http://docs.rackspacecloud.com/openstack-extensions/compute/rax-rgn/content/ch02.html"/><!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="../common/css/ie.css"/>
+	<![endif]--><link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css"/><link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css"/><script type="text/javascript" src="../common/jquery/jquery-1.4.3.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js"><!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. --></script><script type="text/javascript" src="search/htmlFileList.js"><!----></script><script type="text/javascript" src="search/htmlFileInfoList.js"><!----></script><script type="text/javascript" src="search/nwSearchFnt.js"><!----></script><script type="text/javascript" src="search/stemmers/en_stemmer.js"><!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js"><!----></script><script type="text/javascript" src="search/index-2.js"><!----></script><script type="text/javascript" src="search/index-3.js"><!----></script><script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-23102455-4']);
+	  </script><script type="text/javascript" src="../common/ga.js"><!----></script></head><body><div id="header"><a onclick="_gaq.push(['_trackEvent', 'Header', 'logo', 'click', 1]);" target="_blank" href="http://www.rackspace.com"><img src="../common/images/rackspace-logo.png" alt="Rackspace Documentation" width="157" height="47"/></a><h1>Chapter 2. Summary of Changes</h1><div id="navheader" align="right"><!----><table class="navLinks"><tr><td><a id="showHideButton" onclick="showHideToc(); _gaq.push(['_trackEvent', 'Header', 'show/hide', 'click', 1]);" class="pointLeft" title="Hide TOC tree">Sidebar
+                            </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch01.html">Prev</a> </td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.rackspace.com/api/">Rackspace Manuals</a><a href="index.html">OpenStack Compute Region Extension</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="rax-rgn.pdf"><img src="../common/images/pdf.png"/></a>
+       
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a></div></div><div id="content"><div class="statustext"> </div><div class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e105"/>Chapter 2. Summary of Changes</h2></div></div></div><div class="toc"><p><strong>Contents</strong></p><dl><dt><span class="section"><a href="ch02.html#d6e109">2.1. New Headers</a></span></dt><dt><span class="section"><a href="ch02.html#d6e112">2.2. New Faults</a></span></dt><dt><span class="section"><a href="ch02.html#d6e115">2.3. New Resources</a></span></dt><dt><span class="section"><a href="ch02.html#d6e118">2.4. New Actions</a></span></dt><dt><span class="section"><a href="ch02.html#d6e121">2.5. 
+              Changes to the OpenStack Compute API
+          </a></span></dt><dd><dl><dt><span class="section"><a href="ch02.html#d6e125">2.5.1. Changes to 4.1.3 Get Server Details</a></span></dt></dl></dd></dl></div><p>
+          The Region Extension to the OpenStack Compute API adds
+          support for a <span class="property">region</span> attribute on
+          servers. This attribute provides a region identifier that is
+          used to provide a hint as to the geographical region of the
+          server.
+      </p><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e109"/>2.1. New Headers</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e112"/>2.2. New Faults</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e115"/>2.3. New Resources</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e118"/>2.4. New Actions</h2></div></div></div><p>None.</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="d6e121"/>2.5. 
+              Changes to the OpenStack Compute API
+          </h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch02.html#d6e125">2.5.1. Changes to 4.1.3 Get Server Details</a></span></dt></dl></div><p>
+              Servers contain a new <span class="property">region</span>
+              attribute that gives a hint as to the geographical
+              region of the server.  The attribute is used for
+              informational purposes only, it cannot be set.
+          </p><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e125"/>2.5.1. Changes to 4.1.3 Get Server Details</h3></div></div></div><p>
+                  Examples 4.11 and 4.12 in the OpenStack Compute
+                  Develorer Guide should be replaced with <a class="xref" href="ch02.html#xmlserver" title="Example 2.1. Server Detail Response: XML">Example 2.1</a> and
+                  <a class="xref" href="ch02.html#jsonserver" title="Example 2.2. Server Detail Response: JSON">Example 2.2</a> below.
+              </p><div class="example"><a id="xmlserver"/><p class="title"><strong>Example 2.1. Server Detail Response: XML</strong></p><div class="example-contents"><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server xmlns="http://docs.openstack.org/compute/api/v1.1"
+        xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:rgn="http://docs.rackspacecloud.com/servers/api/ext/region/v1.0"
+        id="52415800-8b69-11e0-9b19-734f000004d2"
+        tenantId="1234" userId="5678"
+        name="sample-server" status="BUILD"
+        updated="2010-10-10T12:00:00Z" created="2010-08-10T12:00:00Z"
+        progress="60" hostId="e4d909c290d0fb1ca068ffaddf22cbd0"
+        accessIPv4="67.23.10.132"
+        accessIPv6="::babe:67.23.10.132"
+        rgn:region="DFW"&gt;
+    &lt;image id="52415800-8b69-11e0-9b19-734f6f006e54"&gt;
+        &lt;atom:link
+            rel="self"
+            href="http://servers.api.openstack.org/v1.1/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"/&gt;
+        &lt;atom:link
+            rel="bookmark"
+            href="http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"/&gt;
+    &lt;/image&gt;
+    &lt;flavor id="52415800-8b69-11e0-9b19-734f216543fd"&gt;
+        &lt;atom:link
+            rel="self"
+            href="http://servers.api.openstack.org/v1.1/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"/&gt;
+        &lt;atom:link
+            rel="bookmark"
+            href="http://servers.api.openstack.org/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"/&gt;
+    &lt;/flavor&gt;
+    &lt;metadata&gt;
+        &lt;meta key="Server Label"&gt;Web Head 1&lt;/meta&gt;
+        &lt;meta key="Image Version"&gt;2.1&lt;/meta&gt;
+    &lt;/metadata&gt;
+    &lt;addresses&gt;
+        &lt;network id="public"&gt;
+            &lt;ip version="4" addr="67.23.10.132"/&gt;
+            &lt;ip version="6" addr="::babe:67.23.10.132"/&gt;
+            &lt;ip version="4" addr="67.23.10.131"/&gt;
+            &lt;ip version="6" addr="::babe:4317:0A83"/&gt;
+        &lt;/network&gt;
+        &lt;network id="private"&gt;
+            &lt;ip version="4" addr="10.176.42.16"/&gt;
+            &lt;ip version="6" addr="::babe:10.176.42.16"/&gt;
+        &lt;/network&gt;
+    &lt;/addresses&gt;
+    &lt;atom:link
+        rel="self"
+        href="http://servers.api.openstack.org/v1.1/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"/&gt;
+    &lt;atom:link
+        rel="bookmark"
+        href="http://servers.api.openstack.org/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"/&gt;
+&lt;/server&gt;
+</pre></div></div><br class="example-break"/><div class="example"><a id="jsonserver"/><p class="title"><strong>Example 2.2. Server Detail Response: JSON</strong></p><div class="example-contents"><pre class="programlisting">{
+    "server": {
+        "id": "52415800-8b69-11e0-9b19-734f000004d2",
+        "tenantId": "1234",
+        "userId": "5678",
+        "name": "sample-server",
+        "updated": "2010-10-10T12:00:00Z",
+        "created": "2010-08-10T12:00:00Z",
+        "hostId": "e4d909c290d0fb1ca068ffaddf22cbd0",
+        "accessIPv4" : "67.23.10.132",
+        "accessIPv6" : "::babe:67.23.10.132",
+        "status": "BUILD",
+        "progress": 60,
+        "RAX-RGN:region" : "DFW",
+        "image" : {
+            "id": "52415800-8b69-11e0-9b19-734f6f006e54",
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "http://servers.api.openstack.org/v1.1/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"
+                },
+                {
+                    "rel": "bookmark",
+                    "href": "http://servers.api.openstack.org/1234/images/52415800-8b69-11e0-9b19-734f6f006e54"
+                }
+            ]
+        },
+        "flavor" : {
+            "id": "52415800-8b69-11e0-9b19-734f216543fd",
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "http://servers.api.openstack.org/v1.1/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"
+                },
+                {
+                    "rel": "bookmark",
+                    "href": "http://servers.api.openstack.org/1234/flavors/52415800-8b69-11e0-9b19-734f216543fd"
+                }
+            ]
+        },
+        "addresses":  {
+            "public" : [
+                {
+                    "version": 4,
+                    "addr": "67.23.10.132"
+                },
+                {
+                    "version": 6,
+                    "addr": "::babe:67.23.10.132"
+                },
+                {
+                    "version": 4,
+                    "addr": "67.23.10.131"
+                },
+                {
+                    "version": 6,
+                    "addr": "::babe:4317:0A83"
+                }
+            ],
+            "private" : [
+                {
+                    "version": 4,
+                    "addr": "10.176.42.16"
+                },
+                {
+                    "version": 6,
+                    "addr": "::babe:10.176.42.16"
+                }
+            ]
+        },
+        "metadata": {
+            "Server Label": "Web Head 1",
+            "Image Version": "2.1"
+        },
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://servers.api.openstack.org/v1.1/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"
+            },
+            {
+                "rel": "bookmark",
+                "href": "http://servers.api.openstack.org/1234/servers/52415800-8b69-11e0-9b19-734f000004d2"
+            }
+        ]
+    }
+}
+</pre></div></div><br class="example-break"/></div></div></div><script type="text/javascript" src="../common/main.js"><!----></script><hr/><div class="legal"><a href="index.html">Legal notices</a></div></div><div><div id="leftnavigation" style="padding-top:3px; background-color:white;"><div id="tabs"><ul><li><a href="#treeDiv" tabindex="1"><span class="contentsTab">Contents</span></a></li><li><a href="#searchDiv" tabindex="1"><span class="searchTab">Search</span></a></li></ul><div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;"/><div id="ulTreeDiv" style="display:none" class="thisisthat"><ul id="tree" class="filetree"><li tabindex="2"><span class="file"><a href="ch01.html">1. About This Extension</a></span><ul><li tabindex="2"><span class="file"><a href="ch01.html#d6e87">1.1. Document Change History</a></span></li></ul></li><li tabindex="2" id="webhelp-currentid"><span class="file"><a href="ch02.html">2. Summary of Changes</a></span><ul><li tabindex="2"><span class="file"><a href="ch02.html#d6e109">2.1. New Headers</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e112">2.2. New Faults</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e115">2.3. New Resources</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e118">2.4. New Actions</a></span></li><li tabindex="2"><span class="file"><a href="ch02.html#d6e121">2.5. 
+              Changes to the OpenStack Compute API
+          </a></span><ul><li tabindex="2"><span class="file"><a href="ch02.html#d6e125">2.5.1. Changes to 4.1.3 Get Server Details</a></span></li></ul></li></ul></li></ul></div></div><div id="searchDiv"><div id="search"><form onsubmit="Verifie(ditaSearch_Form);return false" name="ditaSearch_Form" class="searchForm"><fieldset class="searchFieldSet"><legend>Search</legend><center><input id="textToSearch" name="textToSearch" type="text" class="searchText"/> &nbsp; <input onclick="Verifie(ditaSearch_Form)" type="button" class="searchButton" value="Go" id="doSearch"/></center></fieldset></form></div><div id="searchResults"><center/></div><p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p></div></div></div></div><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. -->
+                   $('a[title]').qtip({ style: { name: 'cream', tip: true } })
+                </script></body></html>
