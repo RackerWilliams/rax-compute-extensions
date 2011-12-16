@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+        <!-- Some useful entities borrowed from HTML -->
+        <!ENTITY ndash  "&#x2013;">
+        <!ENTITY mdash  "&#x2014;">
+        <!ENTITY hellip "&#x2026;">
+
+        <!-- Useful for describing APIs -->
+        <!ENTITY GET    '<command xmlns="http://docbook.org/ns/docbook">GET</command>'>
+        <!ENTITY PUT    '<command xmlns="http://docbook.org/ns/docbook">PUT</command>'>
+        <!ENTITY POST   '<command xmlns="http://docbook.org/ns/docbook">POST</command>'>
+        <!ENTITY DELETE '<command xmlns="http://docbook.org/ns/docbook">DELETE</command>'>
+
+        <!ENTITY ARROW  '<inlinemediaobject xmlns="http://docbook.org/ns/docbook">
+                 <imageobject>
+                  <imagedata fileref="img/Arrow_east.svg"
+                             format="SVG" scale="60"/>
+                </imageobject>
+              </inlinemediaobject>'>
+
+        <!-- Information about the extension -->
+        <!ENTITY PUB_DATE "2011-12-08">
+        <!ENTITY ALIAS "RAX-DCF">
+        <!ENTITY NAMESPACE "http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0">
+]>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      version="5.0">
+    <title>OpenStack Compute Disk Configuration Extension</title>
+    <titleabbrev>&ALIAS;</titleabbrev>
+  <info>
+    <author>
+      <personname>
+        <firstname/>
+        <surname/>
+      </personname>
+      <affiliation>
+        <orgname>Rackspace Cloud</orgname>
+      </affiliation>
+    </author>
+    <copyright>
+        <year>2011</year>
+        <holder>Rackspace US, Inc.</holder>
+    </copyright>
+    <productname>OpenStack Compute</productname>
+    <pubdate>&PUB_DATE;</pubdate>
+    <legalnotice role="rs-api">
+        <annotation>
+            <remark>Copyright details are filled in by the template.</remark>
+        </annotation>
+    </legalnotice>
+    <abstract>
+      <para>
+          This document is intended for software developers interested
+          in using the Disk Configuration Extension to the OpenStack
+          Compute Application Programming Interface
+          (<abbrev>API</abbrev>).
+      </para>
+    </abstract>
+    <revhistory>
+        <revision>
+            <date>2011-12-08</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Noted what happened when the diskConfig
+                            attribute is not set on server rebuild and
+                            resize.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Fixed a few minor spelling errors.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+        <revision>
+            <date>2011-09-27</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            The diskConfig attribute can now
+                            be set on rebuild and resize
+                            actions.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+        <revision>
+            <date>2011-09-24</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Expanded description somewhat.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Refactored to use MANUAL and
+                            AUTO instead of boolean value.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+        <revision>
+            <date>2011-08-24</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Initial release.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+    </revhistory>
+  </info>
+  <chapter>
+      <title>About This Extension</title>
+      <variablelist spacing="compact">
+          <varlistentry>
+              <term>Name</term>
+              <listitem>
+                  <para>Disk Management Extension</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Namespace</term>
+              <listitem>
+                  <para>&NAMESPACE;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Alias</term>
+              <listitem>
+                  <para>&ALIAS;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Contact</term>
+              <listitem>
+                  <para>
+                      <personname>
+                          <firstname>Gabe</firstname>
+                          <surname>Westmaas</surname>
+                      </personname>
+                      <email>gabe.westmaas@rackspace.com</email>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Status</term>
+              <listitem>
+                  <para>ALPHA</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Last Update</term>
+              <listitem>
+                  <para>&PUB_DATE;</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Dependencies</term>
+              <listitem>
+                  <para>OpenStack Compute API v1.1 (2011-09-08)</para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (PDF)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-dcf.pdf">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-dcf.pdf
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (WADL)</term>
+              <listitem>
+                  <para>
+                      None, the extension makes no modification to the API WADL.
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Doc Link (XSD)</term>
+              <listitem>
+                  <para>
+                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-dcf/api.xsd">
+                          http://docs.rackspacecloud.com/servers/api/ext/rax-dcf/api.xsd
+                      </link>
+                  </para>
+              </listitem>
+          </varlistentry>
+          <varlistentry>
+              <term>Short Description</term>
+              <listitem>
+                  <para>
+                      Adds support for disk management flag on servers and images.
+                  </para>
+              </listitem>
+          </varlistentry>
+      </variablelist>
+      <?hard-pagebreak?>
+      <example>
+          <title>Extension Query Response: XML</title>
+          <programlisting language="xml">
+<?db-font-size 95% ?><xi:include href="samples/ext_query.xml" parse="text"/>
+          </programlisting>
+      </example>
+      <?hard-pagebreak?>
+      <example>
+          <title>Extension Query Response: JSON</title>
+          <programlisting language="javascript">
+<?db-font-size 95% ?><xi:include href="samples/ext_query.json" parse="text"/>
+          </programlisting>
+      </example>
+      <section>
+          <title>Document Change History</title>
+          <para>
+              The most recent changes to this document are described
+              below.
+          </para>
+          <?rax revhistory?>
+      </section>
+  </chapter>
+  <chapter>
+      <title>Summary of Changes</title>
+      <para>
+          The Disk Configuration Extension to the OpenStack Compute
+          API adds support for a <property>diskConfig</property>
+          attribute on servers and images. These attribute controls
+          how a disk is partitioned when a server is created, rebuilt,
+          or resized.
+      </para>
+      <section>
+          <title>New Headers</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Faults</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Resources</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Actions</title>
+          <para>None.</para>
+      </section>
+      <section>
+          <title>
+              Changes to the OpenStack Compute API
+          </title>
+          <para>
+              Images and servers contain a new
+              <property>diskConfig</property> attribute that controls
+              how a disk is partitioned when a server is created,
+              rebuilt, or resized.
+          </para>
+          <section>
+              <title>Changes to 4.1.3 and 4.5.2 Get Server/Image Details</title>
+              <para>
+                  Examples 4.11 and 4.12 in the OpenStack Compute
+                  Developer Guide should be replaced with <xref
+                  linkend="xmlserver" xrefstyle="select: label"/> and
+                  <xref linkend="jsonserver" xrefstyle="select:
+                  label"/> below.  Similarly the attribute can be
+                  specified on an image such that Examples 4.47 and
+                  4.48 are changed as illustrated in <xref
+                  linkend="xmlimage" xrefstyle="select: label"/> and
+                  <xref linkend="jsonimage" xrefstyle="select:
+                  label"/>.  The <property>diskConfig</property>
+                  attribute can contain one of two possible values:
+                  <code>AUTO</code> and <code>MANUAL</code>.
+              </para>
+              <?hard-pagebreak?>
+              <example xml:id="xmlserver">
+                  <title>Server Detail Response: XML</title>
+                  <programlisting language="xml"><?db-font-size 95% ?><xi:include href="samples/dcf-server.xml" parse="text"/></programlisting>
+              </example>
+              <?hard-pagebreak?>
+              <example xml:id="jsonserver">
+                  <title>Server Detail Response: JSON</title>
+                  <programlisting language="javascript"><?db-font-size 90%?><xi:include href="samples/dcf-server.json" parse="text"/></programlisting>
+              </example>
+              <?hard-pagebreak?>
+              <example xml:id="xmlimage">
+                  <title>Image Detail Response: XML</title>
+                  <programlisting language="xml"><?db-font-size 95% ?><xi:include href="samples/dcf-image.xml" parse="text"/></programlisting>
+              </example>
+              <?hard-pagebreak?>
+              <example xml:id="jsonimage">
+                  <title>Image Detail Response: JSON</title>
+                  <programlisting language="javascript"><?db-font-size 90%?><xi:include href="samples/dcf-image.json" parse="text"/></programlisting>
+              </example>
+          </section>
+          <?hard-pagebreak?>
+          <section>
+              <title>Changes to 4.1.2 Create Server</title>
+              <para>
+                   When a server is created from an image with the
+                   <property>diskConfig</property> value set to
+                   <code>AUTO</code> the server will be built with a
+                   single partition which is expanded to the size of
+                   the flavor selected.  When the attribute is set to
+                   <code>MANUAL</code> the server will be created with
+                   a 10 gigabyte partition and the remaining disk
+                   space allocated to the flavor will remain
+                   unpartitioned. A server inherits the
+                   <property>diskConfig</property> attribute from the
+                   image from which it is created.  The value,
+                   however, may be overwritten when creating a server
+                   as illustrated in <xref linkend="xmlservercreate"
+                   xrefstyle="select: label"/> and <xref
+                   linkend="jsonservercreate" xrefstyle="select:
+                   label"/>.
+              </para>
+              <example xml:id="xmlservercreate">
+                  <title>Server Create Request With DiskConfig: XML</title>
+                  <programlisting language="xml"><xi:include href="samples/server-post-req.xml" parse="text"/></programlisting>
+              </example>
+              <example xml:id="jsonservercreate">
+                  <title>Server Create Request With DiskConfig: JSON</title>
+                  <programlisting language="javascript"><xi:include href="samples/server-post-req.json" parse="text"/></programlisting>
+              </example>
+              <para>
+                  In this example, the server is created with a
+                  <code>MANUAL</code> diskConfig regardless of what
+                  the image <property>diskConfig</property> attribute
+                  is set to.  Note, that images also inherit the
+                  <property>diskConfig</property> from a server.  So,
+                  if an image is created from the server <xref
+                  linkend="xmlserver"/> it will also have a
+                  <property>diskConfig</property> value of
+                  <code>MANUAL</code>.
+              </para>
+          </section>
+          <?hard-pagebreak?>
+          <section>
+              <title>Changes to 4.3.3 Rebuild Server</title>
+              <para>
+                  The <property>diskConfig</property> attribute may be
+                  set when rebuilding the server. A sample rebuild
+                  request is illustrated in <xref
+                  linkend="xmlserverrebuild" xrefstyle="select:
+                  label"/> and <xref linkend="jsonserverrebuild"
+                  xrefstyle="select: label"/>.  In these examples, the
+                  <property>diskConfig</property> attribute is set to
+                  <code>MANUAL</code>, this allows unused diskspace to
+                  be used for other partitions once the server is
+                  rebuilt.
+              </para>
+              <para>
+                  Note that if the <property>diskConfig</property>
+                  attribute is not set during the rebuild, the
+                  original value of the attribute will be retained.
+              </para>
+              <example xml:id="xmlserverrebuild">
+                  <title>Action Rebuild With DiskConfig: XML</title>
+                  <programlisting language="xml"><xi:include href="samples/rebuild_all.xml" parse="text"/></programlisting>
+              </example>
+              <example xml:id="jsonserverrebuild">
+                  <title>Action Rebuild With DiskConfig: JSON</title>
+                  <programlisting language="javascript"><xi:include href="samples/rebuild_all.json" parse="text"/></programlisting>
+              </example>
+          </section>
+          <section>
+              <title>Changes to 4.3.4 Resize Server</title>
+              <para>
+                  The <property>diskConfig</property> attribute may be
+                  set when resizing a server.  This gives the ability
+                  to change the value of the attribute when scaling a
+                  server up or down.
+              </para>
+              <para>
+                  Note that if the <property>diskConfig</property>
+                  attribute is not set during the resize, the original
+                  value of the attribute will be retained.
+              </para>
+              <example xml:id="xmlserverrsize">
+                  <title>Action Resize With DiskConfig: XML</title>
+                  <programlisting language="xml"><xi:include href="samples/resize.xml" parse="text"/></programlisting>
+              </example>
+              <example xml:id="jsonserverresize">
+                  <title>Action Resize With DiskConfig: JSON</title>
+                  <programlisting language="javascript"><xi:include href="samples/resize.json" parse="text"/></programlisting>
+              </example>
+          </section>
+      </section>
+  </chapter>
+</book>

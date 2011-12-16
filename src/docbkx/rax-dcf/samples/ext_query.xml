@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extensions xmlns="http://docs.openstack.org/common/api/v1.0"
+            xmlns:atom="http://www.w3.org/2005/Atom">
+    <extension name="Disk Configuration Extension"
+               namespace="http://docs.rackspacecloud.com/servers/api/ext/diskConfig/v1.0"
+               alias="RAX-DCF" updated="2011-09-27T00:00:00">
+        <description>
+            Adds support for disk management flag on servers and images.
+        </description>
+        <atom:link rel="describedby" type="application/pdf"
+                   href="http://docs.rackspacecloud.com/servers/api/ext/rax-dcf.pdf"/>
+        <atom:link rel="describedby" type="application/xml"
+                   href="http://docs.rackspacecloud.com/servers/api/ext/rax-dcf/api.xsd"/>
+    </extension>
+</extensions>
