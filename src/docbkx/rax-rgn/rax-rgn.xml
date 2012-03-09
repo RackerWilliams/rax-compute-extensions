@@ -29,6 +29,7 @@
       xmlns:svg="http://www.w3.org/2000/svg"
       xmlns:m="http://www.w3.org/1998/Math/MathML"
       xmlns:html="http://www.w3.org/1999/xhtml"
+      xml:id="rax-rgn"
       version="5.0">
     <title>OpenStack Compute Region Extension</title>
     <titleabbrev>&ALIAS;</titleabbrev>
@@ -53,6 +54,28 @@
             <remark>Copyright details are filled in by the template.</remark>
         </annotation>
     </legalnotice>
+      <othercredit>
+          <personname>
+              <firstname>Gabe</firstname>
+              <surname>Westmaas</surname>
+          </personname>
+          <email>gabe.westmaas@rackspace.com</email>
+      </othercredit>
+    <extensions xmlns="http://docs.openstack.org/common/api/v1.0"
+		xmlns:atom="http://www.w3.org/2005/Atom">
+      <extension name="Region Extension"
+		 namespace="http://docs.rackspacecloud.com/servers/api/ext/region/v1.0"
+		 alias="RAX-RGN" updated="2011-10-20T00:00:00">
+	<description>
+	  Adds an attribute to the server that is used to
+	  provide a hint as to the geographical region of server.
+	</description>
+	<atom:link rel="describedby" type="application/pdf"
+		   href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf"/>
+	<atom:link rel="describedby" type="application/xml"
+		   href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd"/>
+      </extension>
+    </extensions>
     <abstract>
       <para>
           This document is intended for software developers interested
@@ -234,12 +257,12 @@
               <?hard-pagebreak?>
               <example xml:id="xmlserver">
                   <title>Server Detail Response: XML</title>
-                  <programlisting language="xml"><?db-font-size 95% ?><xi:include href="samples/rgn-server.xml" parse="text"/></programlisting>
+                  <literallayout language="xml"><?db-font-size 95% ?><xi:include href="samples/rgn-server.xml" parse="text"/></literallayout>
               </example>
               <?hard-pagebreak?>
               <example xml:id="jsonserver">
                   <title>Server Detail Response: JSON</title>
-                  <programlisting language="javascript"><?db-font-size 90%?><xi:include href="samples/rgn-server.json" parse="text"/></programlisting>
+                  <literallayout language="javascript"><?db-font-size 90%?><xi:include href="samples/rgn-server.json" parse="text"/></literallayout>
               </example>
           </section>
       </section>
