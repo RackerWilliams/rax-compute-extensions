@@ -29,6 +29,7 @@
       xmlns:svg="http://www.w3.org/2000/svg"
       xmlns:m="http://www.w3.org/1998/Math/MathML"
       xmlns:html="http://www.w3.org/1999/xhtml"
+      xml:id="rax-rgn"
       version="5.0">
     <title>OpenStack Compute Region Extension</title>
     <titleabbrev>&ALIAS;</titleabbrev>
@@ -53,6 +54,28 @@
             <remark>Copyright details are filled in by the template.</remark>
         </annotation>
     </legalnotice>
+      <othercredit>
+          <personname>
+              <firstname>Gabe</firstname>
+              <surname>Westmaas</surname>
+          </personname>
+          <email>gabe.westmaas@rackspace.com</email>
+      </othercredit>
+    <extensions xmlns="http://docs.openstack.org/common/api/v1.0"
+		xmlns:atom="http://www.w3.org/2005/Atom">
+      <extension name="Region Extension"
+		 namespace="http://docs.rackspacecloud.com/servers/api/ext/region/v1.0"
+		 alias="RAX-RGN" updated="2011-10-20T00:00:00">
+	<description>
+	  Adds an attribute to the server that is used to
+	  provide a hint as to the geographical region of server.
+	</description>
+	<atom:link rel="describedby" type="application/pdf"
+		   href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf"/>
+	<atom:link rel="describedby" type="application/xml"
+		   href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd"/>
+      </extension>
+    </extensions>
     <abstract>
       <para>
           This document is intended for software developers interested
@@ -75,118 +98,6 @@
         </revision>
     </revhistory>
   </info>
-  <chapter>
-      <title>About This Extension</title>
-      <variablelist spacing="compact">
-          <varlistentry>
-              <term>Name</term>
-              <listitem>
-                  <para>Region Extension</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Namespace</term>
-              <listitem>
-                  <para>&NAMESPACE;</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Alias</term>
-              <listitem>
-                  <para>&ALIAS;</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Contact</term>
-              <listitem>
-                  <para>
-                      <personname>
-                          <firstname>Gabe</firstname>
-                          <surname>Westmaas</surname>
-                      </personname>
-                      <email>gabe.westmaas@rackspace.com</email>
-                  </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Status</term>
-              <listitem>
-                  <para>ALPHA</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Last Update</term>
-              <listitem>
-                  <para>&PUB_DATE;</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Dependencies</term>
-              <listitem>
-                  <para>OpenStack Compute API v1.1 (2011-09-08)</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Doc Link (PDF)</term>
-              <listitem>
-                  <para>
-                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf">
-                          http://docs.rackspacecloud.com/servers/api/ext/rax-rgn.pdf
-                      </link>
-                  </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Doc Link (WADL)</term>
-              <listitem>
-                  <para>
-                      None, the extension makes no modification to the API WADL.
-                  </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Doc Link (XSD)</term>
-              <listitem>
-                  <para>
-                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd">
-                          http://docs.rackspacecloud.com/servers/api/ext/rax-rgn/api.xsd
-                      </link>
-                  </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Short Description</term>
-              <listitem>
-                  <para>
-                      Adds an attribute to the server that is used to
-                      provide a hint as to the geographical region of server.
-                  </para>
-              </listitem>
-          </varlistentry>
-      </variablelist>
-      <?hard-pagebreak?>
-      <example>
-          <title>Extension Query Response: XML</title>
-          <programlisting language="xml">
-<?db-font-size 95% ?><xi:include href="samples/ext_query.xml" parse="text"/>
-          </programlisting>
-      </example>
-      <?hard-pagebreak?>
-      <example>
-          <title>Extension Query Response: JSON</title>
-          <programlisting language="javascript">
-<?db-font-size 95% ?><xi:include href="samples/ext_query.json" parse="text"/>
-          </programlisting>
-      </example>
-      <section>
-          <title>Document Change History</title>
-          <para>
-              The most recent changes to this document are desrcibed
-              below.
-          </para>
-          <?rax revhistory?>
-      </section>
-  </chapter>
   <chapter>
       <title>Summary of Changes</title>
       <para>
@@ -234,12 +145,12 @@
               <?hard-pagebreak?>
               <example xml:id="xmlserver">
                   <title>Server Detail Response: XML</title>
-                  <programlisting language="xml"><?db-font-size 95% ?><xi:include href="samples/rgn-server.xml" parse="text"/></programlisting>
+                  <literallayout language="xml"><?db-font-size 95% ?><xi:include href="samples/rgn-server.xml" parse="text"/></literallayout>
               </example>
               <?hard-pagebreak?>
               <example xml:id="jsonserver">
                   <title>Server Detail Response: JSON</title>
-                  <programlisting language="javascript"><?db-font-size 90%?><xi:include href="samples/rgn-server.json" parse="text"/></programlisting>
+                  <literallayout language="javascript"><?db-font-size 90%?><xi:include href="samples/rgn-server.json" parse="text"/></literallayout>
               </example>
           </section>
       </section>

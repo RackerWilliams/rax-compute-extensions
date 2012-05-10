@@ -11,7 +11,7 @@
 <!--*******************************************************-->
 <!DOCTYPE application [
 <!ENTITY % common  
-  SYSTEM "https://raw.github.com/openstack/compute-api/master/openstack-compute-api-1.1/src/common.ent">
+  SYSTEM "https://raw.github.com/openstack/compute-api/master/openstack-compute-api-2/src/common.ent">
 
 %common;
 ]>
